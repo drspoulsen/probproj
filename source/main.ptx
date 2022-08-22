@@ -24,14 +24,13 @@
     <!-- out for now and write this when the book is more complete -->
 
     <!-- <xi:include href="./meta_frontmatter.ptx" /> -->
-    
+
 
     <!-- The first chapter will be bare bones to illustrate the    -->
     <!-- possible structure of the book.  Once you know what the   -->
     <!-- title of the chapter is, rename the file something based  -->
     <!-- on the title (ch-shorttitle.ptx) both here and on disk    -->
-    <xi:include href="./ch_first.ptx" />
-    <xi:include href="./ch_empty.ptx"/>
+    <xi:include href="./ch_one.ptx" />
     <!-- Of course you will want to add more chapters as you proceed-->
 
     <!-- This chapter contains a wide variety of elements to  -->
