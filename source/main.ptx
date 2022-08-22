@@ -12,16 +12,19 @@
 
   <!-- The <book> tags wrap all the content.  Change the @xml:id   -->
   <!-- to some short (non-spaced) description of your book         -->
-  <book xml:id="The Probability Project">
+
+  <book xml:id="probproj">
     <!-- The book needs a title and can have a subtitle  -->
     <title>The Probability Project</title>
-    <subtitle>An introductory textbook for students, by students</subtitle>
+    <subtitle>A textbook by students, for students</subtitle>
 
     <!-- Now we include files containing each main devision.       -->
 
     <!-- First a frontmatter for prefaces and such. Maybe comment  -->
     <!-- out for now and write this when the book is more complete -->
-    <!--<xi:include href="./meta_frontmatter.ptx" /> -->
+
+    <!-- <xi:include href="./meta_frontmatter.ptx" /> -->
+    
 
     <!-- The first chapter will be bare bones to illustrate the    -->
     <!-- possible structure of the book.  Once you know what the   -->
