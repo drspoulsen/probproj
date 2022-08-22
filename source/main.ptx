@@ -37,7 +37,7 @@
     <!-- illustrate what pretext can do, plus links to more help.  -->
     <!-- We recommend keeping this handy, and commenting it out    -->
     <!-- when you show off your own work.                          -->
-    <xi:include href="./ch_features.ptx" />
+    <!--<xi:include href="./ch_features.ptx" />-->
 
 
     <!-- This chapter includes several features that require pregeneration   -->
@@ -48,6 +48,6 @@
     <!-- <xi:include href="./ch_generate.ptx" /> -->
 
     <!-- Finaly we place the backmatter in its own file and inlcude-->
-    <xi:include href="./meta_backmatter.ptx" />
+    <!--<xi:include href="./meta_backmatter.ptx" />-->
   </book>
 </pretext>
