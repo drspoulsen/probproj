@@ -5,11 +5,18 @@
 <chapter xml:id="ch_first" xmlns:xi="http://www.w3.org/2001/XInclude">
 
 <!-- Change title when you have one: -->
-  <title>My First Chapter</title>
+  <title>Probability Via Counting</title>
   <!-- If the chapter has sections, there may be an introduction -->
   <!-- before those sections. Note the <p> tags around content.  -->
   <introduction>
-    <p>This is the introduction to the chapter</p>
+    <p>There are a lot of ways to think about probability philosophically, but
+    we will save that nuance until we have a good working relationship with
+    probability. For now, we will approach probability through the idea of
+    equally likely outcomes. In short, to calculate the probability of a specific thing
+    occuring, we will calculate the number of ways that the specific thing can occur, and
+    divide by the total number of possible things. With this idea in mind,
+    counting becomes paramount. Therefore, before we can deal with probability,
+    we have to deal with counting.</p>
   </introduction>
 
   <!-- Sections can be written directly here, but it might help  -->
