@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec_first-intro" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="sec-multiplication-principle" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The Multiplication Principle</title>
   <activity xml:id="pre-work-mult-princ">
     <p>
@@ -19,5 +19,20 @@
     		</li>
     </ol>
   </p>
+  <interactive desmos="ttox1bvxku" width="60%" aspect="2:3" />
   </activity>
+  </section>
+
+  <subsection xml:id="subsec_another-subsection">
+    <title>Another Subsection</title>
+    <p>
+      Text with some math: <m>\sin(x) = \cos(x)</m> only for some values of <m>x</m>.
+    </p>
+  </subsection>
+
+  <conclusion>
+    <p>
+      After the last subsection, you might have a conclusion.
+    </p>
+  </conclusion>
 </section>
