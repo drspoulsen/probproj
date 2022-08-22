@@ -39,6 +39,7 @@
     <!-- when you show off your own work.                          -->
     <xi:include href="./ch_features.ptx" />
 
+
     <!-- This chapter includes several features that require pregeneration   -->
     <!-- of assets with `pretext generate` or similar. Some features require -->
     <!-- internet access; others require local installs not automatically    -->
