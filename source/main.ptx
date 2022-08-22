@@ -12,16 +12,16 @@
 
   <!-- The <book> tags wrap all the content.  Change the @xml:id   -->
   <!-- to some short (non-spaced) description of your book         -->
-  <book xml:id="my-great-book">
+  <book xml:id="The Probability Project">
     <!-- The book needs a title and can have a subtitle  -->
-    <title>My Great Book</title>
-    <subtitle>An example to be modified</subtitle>
+    <title>The Probability Project</title>
+    <subtitle>An introductory textbook for students, by students</subtitle>
 
     <!-- Now we include files containing each main devision.       -->
 
     <!-- First a frontmatter for prefaces and such. Maybe comment  -->
     <!-- out for now and write this when the book is more complete -->
-    <xi:include href="./meta_frontmatter.ptx" />
+    <!--<xi:include href="./meta_frontmatter.ptx" /> -->
 
     <!-- The first chapter will be bare bones to illustrate the    -->
     <!-- possible structure of the book.  Once you know what the   -->
@@ -36,7 +36,7 @@
     <!-- We recommend keeping this handy, and commenting it out    -->
     <!-- when you show off your own work.                          -->
     <xi:include href="./ch_features.ptx" />
-  
+
     <!-- This chapter includes several features that require pregeneration   -->
     <!-- of assets with `pretext generate` or similar. Some features require -->
     <!-- internet access; others require local installs not automatically    -->
