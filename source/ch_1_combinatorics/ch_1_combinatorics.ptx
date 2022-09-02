@@ -17,6 +17,7 @@
   <!-- That way it is easy to include the section in a different -->
   <!-- chapter later if you change your mind about the order.    -->
   <xi:include href="./sec_1_1_multiplication/sec_1_1_multiplication.ptx" />
+  <xi:include href="./sec_1_2_permutations/sec_1_2_permutations.ptx" />
   <xi:include href="./sec_1_3_combinations/sec_1_3_combinations.ptx" />
   <!-- One or more of the sections of a chapter might be exercises-->
 </chapter>

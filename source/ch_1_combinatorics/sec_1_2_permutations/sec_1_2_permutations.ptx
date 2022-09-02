@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xml:id="sec_1_2_permutations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Permutations</title>
+  <introduction>
+    <p>An introduction to the second Section.</p>
+  </introduction>
+  <xi:include href="./sec_1_2_examples.ptx" />
+</section>
