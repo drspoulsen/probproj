@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xml:id="sec_1_3_combinations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Combinations</title>
+  <introduction>
+    <p>An introduction to the third Section.</p>
+  </introduction>
+
+  <xi:include href="./sec_1_3_examples.ptx" />
+</section>
