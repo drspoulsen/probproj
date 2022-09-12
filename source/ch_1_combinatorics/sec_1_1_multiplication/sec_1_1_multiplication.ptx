@@ -2,6 +2,91 @@
 <section xml:id="sec_1_1_multiplication" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Multiplication Principle</title>
   <introduction>
-    <p>An introduction to the first Section.</p>
+    <p>Suppose you just bought three new pairs of socks and a pair of shoes.
+      With the socks and shoes you already have, you have a total of four
+      pairs of socks and three pairs of shoes. How many different combinations
+      of socks and shoes can you create? </p>
+      <table>
+	<title>Table 1. Sock and Shoe Combinations</title>
+	<tabular>
+		<row bottom="medium">
+			<cell halign="center" right="medium">
+				Shoe<backslash />Sock
+			</cell>
+			<cell>
+				Sock 1
+			</cell>
+			<cell>
+				Sock 2
+			</cell>
+			<cell>
+				Sock 3
+			</cell>
+			<cell>
+				Sock 4
+			</cell>
+		</row>
+		<row>
+			<cell right="medium">
+				Shoe 1
+			</cell>
+			<cell>
+				Sock 1 with Shoe 1
+			</cell>
+			<cell>
+				Sock 2 with Shoe 1
+			</cell>
+			<cell>
+				Sock 3 with Shoe 1
+			</cell>
+			<cell>
+				Sock 4 with Shoe 1
+			</cell>
+		</row>
+		<row>
+			<cell right="medium">
+				Shoe 2
+			</cell>
+			<cell>
+				Sock 1 with Shoe 2
+			</cell>
+			<cell>
+				Sock 2 with Shoe 2
+			</cell>
+			<cell>
+				Sock 3 with Shoe 2
+			</cell>
+			<cell>
+				Sock 4 with Shoe 2
+			</cell>
+		</row>
+		<row>
+			<cell right="medium">
+				Shoe 3
+			</cell>
+			<cell>
+				Sock 1 with Shoe 3
+			</cell>
+			<cell>
+				Sock 2 with Shoe 3
+			</cell>
+			<cell>
+				Sock 3 with Shoe 3
+			</cell>
+			<cell>
+				Sock 4 with Shoe 3
+			</cell>
+		</row>
+	</tabular>
+</table>
+<principle xml:id="multiplication_principle" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title> Multiplication Principle</title>
+  <statement>
+    <p>
+If there are <m> m </m> possibilities of choices of <m> A </m>, and <m> n </m> possibilities of choices of <m> B </m>, then there are <m> mn </m> possibilities of choices of <m>A</m> and <m>B</m>.
+    </p>
+  </statement>
+</principle>
   </introduction>
+ <xi:include href="./sec_1_1_examples.ptx" />
 </section>
