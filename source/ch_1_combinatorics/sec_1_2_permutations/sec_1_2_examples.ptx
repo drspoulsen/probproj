@@ -2,72 +2,39 @@
 
 <section xml:id="sec_1_2_examples" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Examples</title>
+  <exercises>
+      <exercisegroup>
+        <introduction>
+          <p>
+            Let's look at the set <m>A = \{1, 2, 3\}</m>.
+          </p>
+        </introduction>
 
-  <p>
-    Here is an example from section 1.2
-  </p>
+        <exercise>
+          <statement>
+            <p>
+              How many permutations of set A can you create?
+            </p>
+          </statement>
+          <solution>
+            <p>
+              There are 6 permutations. <m>\{1, 2, 3\}, \{1, 3, 2\}, \{2, 1, 3\}, \{2, 3, 1\}, \{3, 1, 2\}</m>, and <m>\{3, 2, 1\}</m>.
+            </p>
+          </solution>
+        </exercise>
 
-  <example>
-    <statement>
-      <p>
-        The statement of the example, since it will have a solution.  What is the solution?
-      </p>
-    </statement>
-    <solution>
-      <p>
-        This is the solution.
-      </p>
-    </solution>
-  </example>
-
-  <p>
-    Here is another example, but without a solution
-  </p>
-
-  <example>
-    <p>
-      This is an example of an example without a solution (or hint or answer) so the paragraph doesn't need to be inside a statement tag.
-    </p>
-  </example>
-
-  <p>
-    Although the next things are not examples, they give examples of blocks that are not examples.  First a theorem.
-  </p>
-
-  <theorem xml:id="thm_first-examples-theorem">
-    <title>Theorem Title</title>
-    <statement>
-      <p>
-        This is the statement of the theorem.
-      </p>
-    </statement>
-    <proof>
-      <p>
-        And this is its proof.
-      </p>
-    </proof>
-  </theorem>
-
-  <corollary xml:id="cor_first-examples-corollary">
-    <statement>
-      <p>
-        A corollary that doesn't need a proof.
-      </p>
-    </statement>
-  </corollary>
-
-  <p>
-    Perhaps at the end of the section, you want to add a note to the reader about how what you have fits into the larger scope of mathematics.
-  </p>
-
-  <remark xml:id="remark_first-examples-context">
-    <title>Larger Context</title>
-    <p>
-      Comment to the reader here.
-    </p>
-  </remark>
-
-  <p>
-    Of course, if you want more information, you might see <xref ref="thm_first-examples-theorem"/>.
-  </p>
+        <exercise>
+          <statement>
+            <p>
+              Without writing them all down, does there seem to be another way to figure out how many permutations there will be of a set?
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Another way to find the amount of permutations a set will contain is to calculate <m>n!</m> where <m>n</m> is the number of elements within that set.
+            </p>
+          </solution>
+        </exercise>
+      </exercisegroup>
+    </exercises>
 </section>
