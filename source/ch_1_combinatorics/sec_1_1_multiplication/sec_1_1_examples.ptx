@@ -4,11 +4,31 @@
   <title>Examples</title>
   <example>
     <statement>
-  <p>
-    Your friend suggests you hang all your records up on your wall.
-    You have 25 of them and want to make sure they are in the best order possible.
-    How many different ways can you arrange your records to make a 5x5 square?
-  </p>
-</statement>
-</example>
+      <p>
+    Your friend suggests you hang all your records up on your wall. You have 4
+    rock, and 2 heavy metal, 3 pop, and 2 classical. Suppose you want to hang
+    one of each genre. How many different choices do you have to put up on your
+    wall?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        4 x 2 x 3 x 2 = 48
+      </p>
+    </solution>
+  </example>
+  <example>
+    <statement>
+      <p>
+      Suppose you have been given the job to assign your soccer team of five
+      players, jersey numbers. You have numbers 1-9. Since no two players can
+      wear the same number, how many possible choices are there?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        9 x 8 x 7 x 6 x 5 = 15120
+      </p>
+    </solution>
+  </example>
 </section>
