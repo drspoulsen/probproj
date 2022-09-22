@@ -3,14 +3,14 @@
 <section xml:id="sec_1_2_examples" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Examples</title>
   <exercises>
-      <exercisegroup>
+
         <introduction>
           <p>
             Let's look at the set <m>A = \{1, 2, 3\}</m>.
           </p>
         </introduction>
 
-        <exercise>
+        <task>
           <statement>
             <p>
               How many permutations of set A can you create?
@@ -21,9 +21,9 @@
               There are 6 permutations. <m>\{1, 2, 3\}, \{1, 3, 2\}, \{2, 1, 3\}, \{2, 3, 1\}, \{3, 1, 2\}</m>, and <m>\{3, 2, 1\}</m>.
             </p>
           </solution>
-        </exercise>
+        </task>
 
-        <exercise>
+        <task>
           <statement>
             <p>
               Without writing them all down, does there seem to be another way to figure out how many permutations there will be of a set?
@@ -34,7 +34,7 @@
               Another way to find the amount of permutations a set will contain is to calculate <m>n!</m> where <m>n</m> is the number of elements within that set.
             </p>
           </solution>
-        </exercise>
-      </exercisegroup>
+        </task>
+
     </exercises>
 </section>
