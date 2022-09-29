@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="The Probability Project">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
@@ -25,6 +25,19 @@ window.MathJax = {
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
   },
   chtml: {
     scale: 0.88,
@@ -81,44 +94,43 @@ window.MathJax = {
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul><li class="link">
+<nav id="toc"><ul>
+<li class="link">
 <a href="ch_1_combinatorics.html" data-scroll="ch_1_combinatorics" class="internal"><span class="codenumber">1</span> <span class="title">Combinatorics</span></a><ul>
 <li><a href="sec_1_1_multiplication.html" data-scroll="sec_1_1_multiplication" class="internal">Multiplication Principle</a></li>
 <li><a href="sec_1_2_permutations.html" data-scroll="sec_1_2_permutations" class="active">Permutations</a></li>
 <li><a href="sec_1_3_combinations.html" data-scroll="sec_1_3_combinations" class="internal">Combinations</a></li>
 </ul>
-</li></ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</li>
+<li class="link">
+<a href="ch_2_probability_basics.html" data-scroll="ch_2_probability_basics" class="internal"><span class="codenumber">2</span> <span class="title">Probability Basics</span></a><ul><li><a href="sec_2_2_simulation.html" data-scroll="sec_2_2_simulation" class="internal">Simulation</a></li></ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_1_2_permutations"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Permutations</span>
 </h2>
-<section class="introduction" id="introduction-3"><p id="p-5">An introduction to the second Section.</p></section><section class="section" id="sec_1_2_examples"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-3"><p id="p-8">An introduction to the second Section.</p></section><section class="section" id="sec_1_2_examples"><h3 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.2.1</span> <span class="title">Examples</span>
 </h3>
-<p id="p-6">Here is an example from section 1.2</p>
-<article class="example example-like" id="example-2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-2"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-2"><article class="example example-like"><p id="p-7">The statement of the example, since it will have a solution.  What is the solution?</p>
+<section class="exercises" id="exercises-1"><h4 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h4>
+<div class="exercisegroup" id="exercisegroup-1">
+<h5 class="heading"><span class="title">Exercise Group.</span></h5>
+<div class="introduction" id="introduction-4"><p id="p-9">Let's look at the set <span class="process-math">\(A = \{1, 2, 3\}\text{.}\)</span></p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-10">How many permutations of set A can you create?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like"><p id="p-8">This is the solution.</p></div></div>
-</div></article></div>
-<p id="p-9">Here is another example, but without a solution</p>
-<article class="example example-like" id="example-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-3"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><p id="p-10">This is an example of an example without a solution (or hint or answer) so the paragraph doesn't need to be inside a statement tag.</p></article></div>
-<p id="p-11">Although the next things are not examples, they give examples of blocks that are not examples.  First a theorem.</p>
-<article class="theorem theorem-like" id="thm_first-examples-theorem"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Theorem Title.</span>
-</h4>
-<p id="p-12">This is the statement of the theorem.</p></article><article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-13">And this is its proof.</p></article></div>
-<article class="corollary theorem-like" id="cor_first-examples-corollary"><h4 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
-</h4>
-<p id="p-14">A corollary that doesn't need a proof.</p></article><p id="p-15">Perhaps at the end of the section, you want to add a note to the reader about how what you have fits into the larger scope of mathematics.</p>
-<article class="remark remark-like" id="remark_first-examples-context"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Larger Context.</span>
-</h4>
-<p id="p-16">Comment to the reader here.</p></article><p id="p-17">Of course, if you want more information, you might see <a href="" class="xref" data-knowl="./knowl/thm_first-examples-theorem.html" title="Theorem 1.2.3: Theorem Title">Theorem 1.2.3</a>.</p></section></section></div></main>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><p id="p-11">There are 6 permutations. <span class="process-math">\(\{1, 2, 3\}, \{1, 3, 2\}, \{2, 1, 3\}, \{2, 3, 1\}, \{3, 1, 2\}\text{,}\)</span> and <span class="process-math">\(\{3, 2, 1\}\text{.}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-2"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-12">Without writing them all down, does there seem to be another way to figure out how many permutations there will be of a set?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like"><p id="p-13">Another way to find the amount of permutations a set will contain is to calculate <span class="process-math">\(n!\)</span> where <span class="process-math">\(n\)</span> is the number of elements within that set.</p></div></div>
+</div></article>
+</div>
+</div></section></section></section></div></main>
 </div>
 </body>
 </html>
