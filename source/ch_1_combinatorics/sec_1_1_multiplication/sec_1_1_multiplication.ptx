@@ -83,10 +83,42 @@
   <title> Multiplication Principle</title>
   <statement>
     <p>
-If there are <m> m </m> possibilities of choices of <m> A </m>, and <m> n </m> possibilities of choices of <m> B </m>, then there are <m> mn </m> possibilities of choices of <m>A</m> and <m>B</m>.
+      If there are <m> m </m> possibilities of choices of <m> A </m>, and <m> n </m> possibilities of choices of <m> B </m>, then there are <m> mn </m> possibilities of choices of <m>A</m> and <m>B</m>.
     </p>
   </statement>
 </principle>
+<example>
+  <statement>
+    <p>
+  Your friend suggests you hang all your records up on your wall. You have 4
+  rock, and 2 heavy metal, 3 pop, and 2 classical. Suppose you want to hang
+  one of each genre. How many different choices do you have to put up on your
+  wall?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <m>(4)(2)(3)(2) = 48</m>
+    </p>
+  </solution>
+</example>
+<example>
+  <statement>
+    <p>
+    Suppose you have been given the job to assign your soccer team of five
+    players, jersey numbers. You have numbers 1-9. Since no two players can
+    wear the same number, how many possible choices are there?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <m>(9)(8)(7)(6)(5) = 15120</m>
+    </p>
+    <p>
+      This previews our next section on Permutations.
+    </p>
+  </solution>
+</example>
   </introduction>
  <xi:include href="./sec_1_1_examples.ptx" />
 </section>

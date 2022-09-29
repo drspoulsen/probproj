@@ -5,29 +5,31 @@
   <example>
     <statement>
       <p>
-    Your friend suggests you hang all your records up on your wall. You have 4
-    rock, and 2 heavy metal, 3 pop, and 2 classical. Suppose you want to hang
-    one of each genre. How many different choices do you have to put up on your
-    wall?
+        Let's look back at our first example with the socks and shoes.
+        Suppose you were just gifted a whole new wardrobe. You now have 12 pairs of socks,
+        6 pairs of shoes, 10 shirts, and 8 pairs of pants. How many different outfits can you wear?
       </p>
     </statement>
     <solution>
       <p>
-        4 x 2 x 3 x 2 = 48
+        <m>(12)(6)(10)(8)=5760</m>
       </p>
     </solution>
   </example>
   <example>
     <statement>
       <p>
-      Suppose you have been given the job to assign your soccer team of five
-      players, jersey numbers. You have numbers 1-9. Since no two players can
-      wear the same number, how many possible choices are there?
+        You just bought a new lock for your locker. It requires 4 characters.
+        However, the first two are letters and the second two are digits.
+        How many different password combinations are there? What if no repeats are allowed?
       </p>
     </statement>
     <solution>
       <p>
-        9 x 8 x 7 x 6 x 5 = 15120
+        <m>(26)(26)(10)(10) = 67600</m> possible password combinations.
+      </p>
+      <p>
+        <m>(26)(25)(10)(9) = 58500</m> possible password combinations.
       </p>
     </solution>
   </example>
