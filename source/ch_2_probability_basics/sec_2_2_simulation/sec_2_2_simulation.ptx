@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xml:id="sec_2_2_simulation" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Simulation</title>
+  <introduction>
+    <p>So far, we have been able to calculate probabilities in two ways.
+    The first is counting the size of an event, and dividing by the size of the
+  sample space, under the assumption that each singleton event is equally likely.
+The second is to argue from the axioms of theorems of probability. Sometimes, it
+can be difficult, if not impossible, to calculate a probability using the
+the aforementioned techniques. Also, for students and experts alike, mistakes
+in calculating a probability can easily occur. Being able to arrive at an
+approximation of a probability by running experiments is an essential tool for
+analyzing probabilities. </p>
+<p>
+A simulation can be done without a computer. For example, if you want to know the
+probability seeing at least one six when you roll four six-sided dice simultaneously,
+you could roll four dice many times, and count the number of times you see a six
+on at least one dice. An estimate for the probability will be the number of times
+you see at least one six divided by the number of times you rolled the four dice.
+If the mathematical model of probability matches our collective intuition of what
+probability is, then we should expect that as the number of rolls of four dice
+gets larger and larger, the estimated probability should approach the "true"
+probability.
+</p>
+<p>
+  That said, the idea of taking a day or two to just roll dice sounds a little tedious.
+  Instead, we will have a computer roll the dice for us, so to speak. Let's just
+  say getting computers to generate numbers that behave like random rolls of the
+  dice has been studied and engineered, so we will just take advantage of that.
+</p>
+<p>
+  For our work, we will use Sage, which is an open-source computer algebra system.
+  In the online version of this book, you can execute and manipulate the code live.
+</p>
+  </introduction>
+  <xi:include href="./sec_2_2_tutorial.ptx" />
+</section>
