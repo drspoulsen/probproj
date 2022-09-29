@@ -40,17 +40,17 @@ roll_d6()
 </sage>
 <p>We can take this a step further. Why roll one dice when we can roll many at once?
   This is step one of the simulation process. The following notation gives a list
-   (named rolls) of 10 six-sided dice rolls.</p>
+   (named rolls) of 100 six-sided dice rolls.</p>
 <sage>
   <input>
 def roll_d6():
      return randrange(6)+1
-rolls=[roll_d6() for i in range(10)]
+rolls=[roll_d6() for i in range(100)]
 rolls
    </input>
 </sage>
 <p>
-  Before we move on, see if you can modify the above code to roll 100 20-sided dice.
+  Before we move on, see if you can modify the above code to roll 50 20-sided dice.
 </p>
 <p>
   So far, we have been able to roll many dice, but we still don't know the
