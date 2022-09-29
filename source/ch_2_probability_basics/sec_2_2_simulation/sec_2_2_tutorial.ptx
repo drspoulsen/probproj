@@ -50,7 +50,7 @@ rolls
    </input>
 </sage>
 <p>
-  Before we move on, see if you can modify the above code to roll 100 20-sided dice.
+  Before we move on, see if you can modify the above code to roll 50 20-sided dice.
 </p>
 <p>
   So far, we have been able to roll many dice, but we still don't know the
