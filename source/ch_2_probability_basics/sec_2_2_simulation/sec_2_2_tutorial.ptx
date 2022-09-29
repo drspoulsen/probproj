@@ -40,12 +40,12 @@ roll_d6()
 </sage>
 <p>We can take this a step further. Why roll one dice when we can roll many at once?
   This is step one of the simulation process. The following notation gives a list
-   (named rolls) of 100 six-sided dice rolls.</p>
+   (named rolls) of 10 six-sided dice rolls.</p>
 <sage>
   <input>
 def roll_d6():
      return randrange(6)+1
-rolls=[roll_d6() for i in range(100)]
+rolls=[roll_d6() for i in range(10)]
 rolls
    </input>
 </sage>
