@@ -33,5 +33,5 @@ probability.
   In the online version of this book, you can execute and manipulate the code live.
 </p>
   </introduction>
-  <xi:include href="./sec_2_2_tutorial.ptx" />
+  <xi:include href="./sec_2_3_tutorial.ptx" />
 </section>
