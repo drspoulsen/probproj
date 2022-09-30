@@ -16,8 +16,11 @@
     of how much each estimate varies from simulation to simulation</li>
  </ol>
 </p>
-<example>
-<title>Probability of Rolling a Six</title>
+<p> In the following examples, we will see this process in action and introduce
+  some useful functions in Sage that can help us to simulate probabilities.
+</p>
+<example xml:id="example_sim_rolling_a_five">
+<title>Probability of Rolling a Five</title>
 <p>What is the probability of rolling a five on a six-sided dice? We know that the
 answer is 1/6, but can we get the computer to arrive at this result? To do this,
 we will roll a lot of virtual dice! Note, Sage counts from 0, so our "computer dice"
@@ -135,6 +138,89 @@ def estimate_probability(num_rolls):
   return estimated_probability
 estimate_list=[estimate_probability(100) for i in range(50)]
 histogram(estimate_list)
+   </input>
+</sage>
+</example>
+<example xml:id="example_sim_rolling_a_five_four_rolls">
+<title>Probability of Rolling a Five in Four Rolls</title>
+<p>
+  What is the probability of rolling a five in four rolls of fair dice? We
+will modify the code from <xref ref="example_sim_rolling_a_five"/> to arrive at
+an approximation of the answer, all while following the simulation process.
+</p>
+<p>
+Before we write code, let's think about what we ary trying to do. We want to
+define "success" (return 1) to be that we roll a five in four rolls of fair dice.
+While "failure" (return 0) is that we do not roll a five in four  rolls of fair dice.
+</p>
+<p>
+The following code rolls four fair "computer dice." This is step one of the simulation process.
+</p>
+<sage>
+  <input>
+def roll_d6():
+     return randrange(6)+1
+rolls=[roll_d6() for i in range(4)]
+rolls
+   </input>
+</sage>
+<p>
+  We can apply our indicator function is_five to each roll in this list. Then,
+  the sum of the list can be either 0,1,2,3, or 4. If the sum is zero, that must mean
+  there are no fives, which is a failure, while if the sum is positive, it means that at least one roll
+  was a five, which is a success. We can write a function, is_positive(), to help
+  us distinguish success from failure in this case. Run the code below to see
+  the result of an experiment of rolling four dice, and seeing if at least one of
+  the dice is a five. This is step two of the simulation process. Run it several times to see that sometimes the experiment "succeeds"
+  and sometimes the experiment "fails."
+</p>
+<sage>
+  <input>
+def is_five(x):
+  if x==5:
+    return 1
+  else:
+    return 0
+def is_positive(x):
+    if x>0:
+      return 1
+    else:
+      return 0
+def roll_d6():
+  return randrange(6)+1
+rolls=[roll_d6() for i in range(4)]
+five_list=[is_five(x) for x in rolls]
+is_positive(sum(five_list))
+   </input>
+</sage>
+<p>
+Now, we move to step 3 of the simulation process. The following code let's us run
+the experiment many times by making the process from the previous code block a
+function in its own right, then running that function multiple times. The probability estimate
+is then the number of successes divided by the number of experiments run.
+</p>
+<sage>
+  <input>
+def is_five(x):
+  if x==5:
+    return 1
+  else:
+    return 0
+def is_positive(x):
+    if x>0:
+      return 1
+    else:
+      return 0
+def roll_d6():
+  return randrange(6)+1
+def perform_experiment():
+  rolls=[roll_d6() for i in range(4)]
+  five_list=[is_five(x) for x in rolls]
+  return is_positive(sum(five_list))
+success_list=[perform_experiment() for i in range(100)]
+total_successes=sum(success_list)
+estimated_probability=total_successes/100
+estimated_probability
    </input>
 </sage>
 </example>
