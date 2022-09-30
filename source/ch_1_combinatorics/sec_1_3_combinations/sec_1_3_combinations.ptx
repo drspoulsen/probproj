@@ -91,12 +91,13 @@
     <p>
     Here's a useful fact:
       <p>
-        <m>{n \choose r} = {n-1 \choose r-1} + {n-1 \choose r}
+        <m>{n \choose r} = {n-1 \choose r-1} + {n-1 \choose r}</m>
       </p>
     </p>
     <p>
       Let's think about why this is the case. Suppose we want to choose <m>r</m>
       elements from a set. Thus, there are two possibilities.
+    </p>
   </statement>
   <statement>
     <p>
