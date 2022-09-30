@@ -17,7 +17,11 @@ sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
                        evalButtonText: 'Evaluate (Sage)'});
 </script>
 </head>
-<body class="ignore-math"><article class="example example-like"><p>What is the probability of rolling a five on a six-sided dice? We know that the answer is 1/6, but can we get the computer to arrive at this result? To do this, we will roll a lot of virtual dice! Note, Sage counts from 0, so our "computer dice" has numbers 0,1,2,3,4,5 instead of 1,2,3,4,5,6. We will correct for this by adding one to each random number.</p>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Probability of Rolling a Five.</span>
+</h4>
+<p>What is the probability of rolling a five on a six-sided dice? We know that the answer is 1/6, but can we get the computer to arrive at this result? To do this, we will roll a lot of virtual dice! Note, Sage counts from 0, so our "computer dice" has numbers 0,1,2,3,4,5 instead of 1,2,3,4,5,6. We will correct for this by adding one to each random number.</p>
 <p>Let's begin by rolling just once dice. The following code rolls one six-sided "computer dice." It does this by defining a function called roll_d6(). This function, when called, generates a number between zero and five via the randrange(5) command, then adds one to get a number between one and six. The thrid line calls the function, effectively rolling the "computer dice."  In the online version of the text, execute the command below multiple times and see that the output can change.</p>
 <pre class="ptx-sagecell sagecell-sage" id="sage-1"><script type="text/x-sage">def roll_d6():
      return randrange(6)+1
@@ -83,5 +87,6 @@ def estimate_probability(num_rolls):
   return estimated_probability
 estimate_list=[estimate_probability(100) for i in range(50)]
 histogram(estimate_list)
-</script></pre></article></body>
+</script></pre></article><span class="incontext"><a href="sec_2_2_simulation.html#example_sim_rolling_a_five" class="internal">in-context</a></span>
+</body>
 </html>
