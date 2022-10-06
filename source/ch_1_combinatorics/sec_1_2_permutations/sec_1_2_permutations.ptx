@@ -5,47 +5,97 @@
     <p>Imagine you are listening to your top 5 favorite song playlist on a shuffle mode where no song repeats before the end of the playlist. Since each song has a random chance of playing at the start, there are 5 choices to choose from. Once that song is finished we now have only 4 options to choose from. As each song ends, there becomes one less option to choose from. Each complete listen through of these songs is what is called a permutation of the playtlist. If you have taken a statistics class before, this may look similar to sampling without replacement. This is because as each song ends, we are not putting it back in the population to potentially be replayed (resampled) again.</p>
     <definition><term>Permutation</term> - a specific ordering of elements within a set. </definition>
   </introduction>
+
+  <exercise>
+  <title>A structured exercise</title>
+  <introduction>
+    <p>
+      Let's look at the set <m>A = \{1, 2, 3\}</m>.
+    </p>
+  </introduction>
+
+  <task>
+    <statement>
+      <p>
+        How many permutations of set A can you create?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        There are 6 permutations. <m>\{1, 2, 3\}, \{1, 3, 2\}, \{2, 1, 3\}, \{2, 3, 1\}, \{3, 1, 2\}</m>, and <m>\{3, 2, 1\}</m>.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        Without writing them all down, does there seem to be another way to figure out how many permutations there will be of a set?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        Another way to find the amount of permutations a set will contain is to calculate <m>n!</m> where <m>n</m> is the number of elements within that set.
+      </p>
+    </answer>
+  </task>
+
+  <conclusion>
+    <p>
+    </p>
+  </conclusion>
+
+</exercise>
+
+<p> Why does it make sense to use factorials to determine the amount of permutations of a set? Let's think back to the multiplication principle and how that would be applied to the playlist example. When we begin the playlist we start with 5 options and once the song ends we go down to 4; to find all of the possibilities of songs for just these two we would do <m>5 * 4</m>. After the second songs ends we then have 3 songs to choose from. We can then take the 20 potential possibilities from the first two songs and multiply them by 3 to get the total amount of combinations for 3 songs. We can continue this trend until we get down to the last remaining song. What we would find is that we end up computing <m> 5 * 4 * 3 * 2 * 1</m> which is equal to <m> 5! </m>.
+</p>
+
+<p>What would happen if we had a set with 4 elements but we wanted the amount of permutations of 2 elements within that set? </p>
+
+<exercise>
+  <title>A structured exercise</title>
+  <introduction>
+    <p>
+      Let's now look at the set <m>B = \{1, 2, 3, 4\}</m>.
+
+    </p>
+  </introduction>
+
+  <task>
+    <statement>
+      <p>
+        How many permutations of set B with length 2 can you create?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        There are 12 permutations. <m>\{1, 2\}, \{1, 3\}, \{1, 4\}, \{2, 1\}, \{2, 3\}, \{2, 4\}, \{3, 1\}, \{3, 2\}, \{3, 4\}, \{4, 1\}, \{4, 2\}, </m> and <m> \{4, 3\} </m>
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        Can you come up with a general formula that can be used to find permutations in examples like this?
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Let's look at part a, <m> 4 * 3 = (4 * 3 * 2 * 1) / (2 * 1) </m>. How did we get the parts of the quotient?
+      </p>
+    </hint>
+    <answer>
+      <p>
+        The general formula for this type of situation is <m> \frac{n!}{(n-k)!} </m>
+      </p>
+    </answer>
+  </task>
+
+
+
+</exercise>
+
   <xi:include href="./sec_1_2_examples.ptx" />
 
-  <p> Why does it make sense to use factorials to determine the amount of permutations of a set? Let's think back to the multiplication principle and how that would be applied to the playlist example. When we begin the playlist we start with 5 options and once the song ends we go down to 4; to find all of the possibilities of songs for just these two we would do <m>5 * 4</m>. After the second songs ends we then have 3 songs to choose from. We can then take the 20 potential possibilities from the first two songs and multiply them by 3 to get the total amount of combinations for 3 songs. We can continue this trend until we get down to the last remaining song. What we would find is that we end up computing <m> 5 * 4 * 3 * 2 * 1</m> which is equal to <m> 5! </m>.
-  </p>
-
-  <p>What would happen if we had a set with 4 elements but we wanted the amount of permutations of 2 elements within that set? </p>
-
-  <exercises>
-    <exercisegroup>
-      <introduction>
-        <p>
-          Let's look at the set <m>B = \{1, 2, 3, 4\}</m>.
-        </p>
-      </introduction>
-
-      <exercise>
-        <statement>
-          <p>
-            How many permutations of set B with length 2 can you create?
-          </p>
-        </statement>
-        <solution>
-          <p>
-            There are 12 permutations. <m>\{1, 2\}, \{1, 3\}, \{1, 4\}, \{2, 1\}, \{2, 3\}, \{2, 4\}, \{3, 1\}, \{3, 2\}, \{3, 4\}, \{4, 1\}, \{4, 2\}, </m> and <m> \{4, 3\} </m>
-          </p>
-        </solution>
-      </exercise>
-      <p> The general formula for situations like this is <m>\frac{n!}{(n-k)!} </m> </p>
-
-      <exercise>
-        <statement>
-          <p>
-            Without writing them all down, does there seem to be another way to figure out how many permutations there will be of a set?
-          </p>
-        </statement>
-        <solution>
-          <p>
-            Another way to find the amount of permutations a set will contain is to calculate <m>n!</m> where <m>n</m> is the number of elements within that set.
-          </p>
-        </solution>
-      </exercise>
-    </exercisegroup>
-  </exercises>
 </section>
