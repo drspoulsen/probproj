@@ -116,43 +116,43 @@ sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_2_3_simulation"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Simulation</span>
 </h2>
-<section class="introduction" id="introduction-7"><p id="p-53">So far, we have been able to calculate probabilities in two ways. The first is counting the size of an event, and dividing by the size of the sample space, under the assumption that each singleton event is equally likely. The second is to argue from the axioms of theorems of probability. Sometimes, it can be difficult, if not impossible, to calculate a probability using the the aforementioned techniques. Also, for students and experts alike, mistakes in calculating a probability can easily occur. Being able to arrive at an approximation of a probability by running experiments is an essential tool for analyzing probabilities.</p>
-<p id="p-54">A simulation can be done without a computer. For example, if you want to know the probability seeing at least one five when you roll four six-sided dice simultaneously, you could roll four dice many times, and count the number of times you see a five on at least one dice. An estimate for the probability will be the number of times you see at least one five divided by the number of times you rolled the four dice. If the mathematical model of probability matches our collective intuition of what probability is, then we should expect that as the number of rolls of four dice gets larger and larger, the estimated probability should approach the "true" probability.</p>
-<p id="p-55">That said, the idea of taking a day or two to just roll dice sounds a little tedious. Instead, we will have a computer roll the dice for us, so to speak. Let's just say getting computers to generate numbers that behave like random rolls of the dice has been studied and engineered, so we will just take advantage of that.</p>
-<p id="p-56">For our work, we will use Sage, which is an open-source computer algebra system. In the online version of this book, you can execute and manipulate the code live.</p></section><section class="section" id="sec_2_3_tutorial"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-9"><p id="p-69">So far, we have been able to calculate probabilities in two ways. The first is counting the size of an event, and dividing by the size of the sample space, under the assumption that each singleton event is equally likely. The second is to argue from the axioms of theorems of probability. Sometimes, it can be difficult, if not impossible, to calculate a probability using the the aforementioned techniques. Also, for students and experts alike, mistakes in calculating a probability can easily occur. Being able to arrive at an approximation of a probability by running experiments is an essential tool for analyzing probabilities.</p>
+<p id="p-70">A simulation can be done without a computer. For example, if you want to know the probability seeing at least one five when you roll four six-sided dice simultaneously, you could roll four dice many times, and count the number of times you see a five on at least one dice. An estimate for the probability will be the number of times you see at least one five divided by the number of times you rolled the four dice. If the mathematical model of probability matches our collective intuition of what probability is, then we should expect that as the number of rolls of four dice gets larger and larger, the estimated probability should approach the "true" probability.</p>
+<p id="p-71">That said, the idea of taking a day or two to just roll dice sounds a little tedious. Instead, we will have a computer roll the dice for us, so to speak. Let's just say getting computers to generate numbers that behave like random rolls of the dice has been studied and engineered, so we will just take advantage of that.</p>
+<p id="p-72">For our work, we will use Sage, which is an open-source computer algebra system. In the online version of this book, you can execute and manipulate the code live.</p></section><section class="section" id="sec_2_3_tutorial"><h3 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.1.1</span> <span class="title">Sage Tutorial</span>
 </h3>
-<p id="p-57">A general outline of the simulation process is as follows:</p>
+<p id="p-73">A general outline of the simulation process is as follows:</p>
 <ol class="decimal">
 <li id="li-1"><p id="p-derived-li-1">Create a list of random numbers</p></li>
 <li id="li-2"><p id="p-derived-li-2">Apply a function or functions to the list to answer whether the experiment is a success (return 1) or a failure (return 0)</p></li>
 <li id="li-3"><p id="p-derived-li-3">Once you can successfully run one trial of an experiment, run the experiment many times, recording the numbers of successes and failures to calculate the estimated probability</p></li>
 <li id="li-4"><p id="p-derived-li-4">To go above and beyond, estimate the probability many times to get a sense of how much each estimate varies from simulation to simulation</p></li>
 </ol>
-<p id="p-58">In the following examples, we will see this process in action and introduce some useful functions in Sage that can help us to simulate probabilities.</p>
+<p id="p-74">In the following examples, we will see this process in action and introduce some useful functions in Sage that can help us to simulate probabilities.</p>
 <article class="example example-like" id="example_sim_rolling_a_five"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example_sim_rolling_a_five"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Probability of Rolling a Five.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example_sim_rolling_a_five"><article class="example example-like"><p id="p-59">What is the probability of rolling a five on a six-sided dice? We know that the answer is 1/6, but can we get the computer to arrive at this result? To do this, we will roll a lot of virtual dice! Note, Sage counts from 0, so our "computer dice" has numbers 0,1,2,3,4,5 instead of 1,2,3,4,5,6. We will correct for this by adding one to each random number.</p>
-<p id="p-60">Let's begin by rolling just once dice. The following code rolls one six-sided "computer dice." It does this by defining a function called roll_d6(). This function, when called, generates a number between zero and five via the randrange(5) command, then adds one to get a number between one and six. The thrid line calls the function, effectively rolling the "computer dice."  In the online version of the text, execute the command below multiple times and see that the output can change.</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example_sim_rolling_a_five"><article class="example example-like"><p id="p-75">What is the probability of rolling a five on a six-sided dice? We know that the answer is 1/6, but can we get the computer to arrive at this result? To do this, we will roll a lot of virtual dice! Note, Sage counts from 0, so our "computer dice" has numbers 0,1,2,3,4,5 instead of 1,2,3,4,5,6. We will correct for this by adding one to each random number.</p>
+<p id="p-76">Let's begin by rolling just once dice. The following code rolls one six-sided "computer dice." It does this by defining a function called roll_d6(). This function, when called, generates a number between zero and five via the randrange(5) command, then adds one to get a number between one and six. The thrid line calls the function, effectively rolling the "computer dice."  In the online version of the text, execute the command below multiple times and see that the output can change.</p>
 <pre class="ptx-sagecell hidden-sagecell-sage" id="sage-1"><script type="text/x-sage">def roll_d6():
      return randrange(6)+1
 roll_d6()
 </script></pre>
-<p id="p-61">We can take this a step further. Why roll one dice when we can roll many at once? This is step one of the simulation process. The following notation gives a list (named rolls) of 100 six-sided dice rolls.</p>
+<p id="p-77">We can take this a step further. Why roll one dice when we can roll many at once? This is step one of the simulation process. The following notation gives a list (named rolls) of 100 six-sided dice rolls.</p>
 <pre class="ptx-sagecell hidden-sagecell-sage" id="sage-2"><script type="text/x-sage">def roll_d6():
      return randrange(6)+1
 rolls=[roll_d6() for i in range(100)]
 rolls
 </script></pre>
-<p id="p-62">Before we move on, see if you can modify the above code to roll 50 20-sided dice.</p>
-<p id="p-63">So far, we have been able to roll many dice, but we still don't know the probability of rolling a five. We need a function that will tell us when we've rolled a five (success), and when we haven't (failure). This is step two of the simulation process. By assigning the value one to success and the value zero to failure, we can count the number of successes by adding up the numbers in the list! We define this function next. Test it to make sure it behaves as expected.</p>
+<p id="p-78">Before we move on, see if you can modify the above code to roll 50 20-sided dice.</p>
+<p id="p-79">So far, we have been able to roll many dice, but we still don't know the probability of rolling a five. We need a function that will tell us when we've rolled a five (success), and when we haven't (failure). This is step two of the simulation process. By assigning the value one to success and the value zero to failure, we can count the number of successes by adding up the numbers in the list! We define this function next. Test it to make sure it behaves as expected.</p>
 <pre class="ptx-sagecell hidden-sagecell-sage" id="sage-3"><script type="text/x-sage">def is_five(x):
   if x==5:
     return 1
   else:
     return 0
 </script></pre>
-<p id="p-64">Now, we just need to apply the is_five() function to every element in our list, and add up the list to tell us the total number of successes. This is step three of the simulation process.</p>
+<p id="p-80">Now, we just need to apply the is_five() function to every element in our list, and add up the list to tell us the total number of successes. This is step three of the simulation process.</p>
 <pre class="ptx-sagecell hidden-sagecell-sage" id="sage-4"><script type="text/x-sage">num_rolls=100
 def is_five(x):
   if x==5:
@@ -167,7 +167,7 @@ total_successes=sum(success_list)
 estimated_probability=total_successes/num_rolls
 estimated_probability
 </script></pre>
-<p id="p-65">Awesome! We now have a way to estimate the probability of rolling a five on a six-sided dice. Notice that we have a process that can be executed many times (try running the cell above many times and see that the output changes). We could create a <em class="emphasis">function</em> that executes the above process, and run that function many times (we'll do it 50 times)! This is step four of the simulation process.</p>
+<p id="p-81">Awesome! We now have a way to estimate the probability of rolling a five on a six-sided dice. Notice that we have a process that can be executed many times (try running the cell above many times and see that the output changes). We could create a <em class="emphasis">function</em> that executes the above process, and run that function many times (we'll do it 50 times)! This is step four of the simulation process.</p>
 <pre class="ptx-sagecell hidden-sagecell-sage" id="sage-5"><script type="text/x-sage">def is_five(x):
   if x==5:
     return 1
@@ -201,15 +201,15 @@ histogram(estimate_list)
 </script></pre></article></div>
 <article class="example example-like" id="example_sim_rolling_a_five_four_rolls"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example_sim_rolling_a_five_four_rolls"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Probability of Rolling a Five in Four Rolls.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example_sim_rolling_a_five_four_rolls"><article class="example example-like"><p id="p-66">What is the probability of rolling a five in four rolls of fair dice? We will modify the code from <a href="" class="xref" data-knowl="./knowl/example_sim_rolling_a_five.html" title="Example 2.1.1: Probability of Rolling a Five">Example 2.1.1</a> to arrive at an approximation of the answer, all while following the simulation process.</p>
-<p id="p-67">Before we write code, let's think about what we ary trying to do. We want to define "success" (return 1) to be that we roll a five in four rolls of fair dice. While "failure" (return 0) is that we do not roll a five in four  rolls of fair dice.</p>
-<p id="p-68">The following code rolls four fair "computer dice." This is step one of the simulation process.</p>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example_sim_rolling_a_five_four_rolls"><article class="example example-like"><p id="p-82">What is the probability of rolling a five in four rolls of fair dice? We will modify the code from <a href="" class="xref" data-knowl="./knowl/example_sim_rolling_a_five.html" title="Example 2.1.1: Probability of Rolling a Five">Example 2.1.1</a> to arrive at an approximation of the answer, all while following the simulation process.</p>
+<p id="p-83">Before we write code, let's think about what we ary trying to do. We want to define "success" (return 1) to be that we roll a five in four rolls of fair dice. While "failure" (return 0) is that we do not roll a five in four  rolls of fair dice.</p>
+<p id="p-84">The following code rolls four fair "computer dice." This is step one of the simulation process.</p>
 <pre class="ptx-sagecell hidden-sagecell-sage" id="sage-7"><script type="text/x-sage">def roll_d6():
      return randrange(6)+1
 rolls=[roll_d6() for i in range(4)]
 rolls
 </script></pre>
-<p id="p-69">We can apply our indicator function is_five to each roll in this list. Then, the sum of the list can be either 0,1,2,3, or 4. If the sum is zero, that must mean there are no fives, which is a failure, while if the sum is positive, it means that at least one roll was a five, which is a success. We can write a function, is_positive(), to help us distinguish success from failure in this case. Run the code below to see the result of an experiment of rolling four dice, and seeing if at least one of the dice is a five. This is step two of the simulation process. Run it several times to see that sometimes the experiment "succeeds" and sometimes the experiment "fails."</p>
+<p id="p-85">We can apply our indicator function is_five to each roll in this list. Then, the sum of the list can be either 0,1,2,3, or 4. If the sum is zero, that must mean there are no fives, which is a failure, while if the sum is positive, it means that at least one roll was a five, which is a success. We can write a function, is_positive(), to help us distinguish success from failure in this case. Run the code below to see the result of an experiment of rolling four dice, and seeing if at least one of the dice is a five. This is step two of the simulation process. Run it several times to see that sometimes the experiment "succeeds" and sometimes the experiment "fails."</p>
 <pre class="ptx-sagecell hidden-sagecell-sage" id="sage-8"><script type="text/x-sage">def is_five(x):
   if x==5:
     return 1
@@ -226,7 +226,7 @@ rolls=[roll_d6() for i in range(4)]
 five_list=[is_five(x) for x in rolls]
 is_positive(sum(five_list))
 </script></pre>
-<p id="p-70">Now, we move to step 3 of the simulation process. The following code let's us run the experiment many times by making the process from the previous code block a function in its own right, then running that function multiple times. The probability estimate is then the number of successes divided by the number of experiments run.</p>
+<p id="p-86">Now, we move to step 3 of the simulation process. The following code let's us run the experiment many times by making the process from the previous code block a function in its own right, then running that function multiple times. The probability estimate is then the number of successes divided by the number of experiments run.</p>
 <pre class="ptx-sagecell hidden-sagecell-sage" id="sage-9"><script type="text/x-sage">def is_five(x):
   if x==5:
     return 1

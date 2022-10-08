@@ -110,27 +110,52 @@ window.MathJax = {
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_1_2_permutations"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Permutations</span>
 </h2>
-<section class="introduction" id="introduction-3"><p id="p-14">An introduction to the second Section.</p></section><section class="section" id="sec_1_2_examples"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-3"><p id="p-14">Imagine you are listening to your top 5 favorite song playlist on a shuffle mode where no song repeats before the end of the playlist. Since each song has a random chance of playing at the start, there are 5 choices to choose from. Once that song is finished we now have only 4 options to choose from. As each song ends, there becomes one less option to choose from. Each complete listen through of these songs is what is called a permutation of the playtlist. If you have taken a statistics class before, this may look similar to sampling without replacement. This is because as each song ends, we are not putting it back in the population to potentially be replayed (resampled) again.</p>
+<article class="definition definition-like" id="definition-1"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
+</h3>
+<dfn class="terminology">Permutation</dfn> - a specific ordering of elements within a set.</article></section><article class="exercise exercise-like" id="exercise-1"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">A structured exercise.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise exercise-like"><div class="introduction" id="introduction-4"><p id="p-15">Let's look at the set <span class="process-math">\(A = \{1, 2, 3\}\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-16">How many permutations of set A can you create?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><p id="p-17">There are 6 permutations. <span class="process-math">\(\{1, 2, 3\}, \{1, 3, 2\}, \{2, 1, 3\}, \{2, 3, 1\}, \{3, 1, 2\}\text{,}\)</span> and <span class="process-math">\(\{3, 2, 1\}\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-18">Without writing them all down, does there seem to be another way to figure out how many permutations there will be of a set?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><p id="p-19">Another way to find the amount of permutations a set will contain is to calculate <span class="process-math">\(n!\)</span> where <span class="process-math">\(n\)</span> is the number of elements within that set.</p></div></div>
+</div></article><div class="conclusion" id="conclusion-1"><p id="p-20"></p></div></article></div>
+<p id="p-21">Why does it make sense to use factorials to determine the amount of permutations of a set? Let's think back to the multiplication principle and how that would be applied to the playlist example. When we begin the playlist we start with 5 options and once the song ends we go down to 4; to find all of the possibilities of songs for just these two we would do <span class="process-math">\(5 * 4\text{.}\)</span> After the second songs ends we then have 3 songs to choose from. We can then take the 20 potential possibilities from the first two songs and multiply them by 3 to get the total amount of combinations for 3 songs. We can continue this trend until we get down to the last remaining song. What we would find is that we end up computing <span class="process-math">\(5 * 4 * 3 * 2 * 1\)</span> which is equal to <span class="process-math">\(5! \text{.}\)</span></p>
+<p id="p-22">What would happen if we had a set with 4 elements but we wanted the amount of permutations of 2 elements within that set?</p>
+<article class="exercise exercise-like" id="exercise-2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">A structured exercise.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><div class="introduction" id="introduction-5"><p id="p-23">Let's now look at the set <span class="process-math">\(B = \{1, 2, 3, 4\}\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-24">How many permutations of set B with length 2 can you create?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like"><p id="p-25">There are 12 permutations. <span class="process-math">\(\{1, 2\}, \{1, 3\}, \{1, 4\}, \{2, 1\}, \{2, 3\}, \{2, 4\}, \{3, 1\}, \{3, 2\}, \{3, 4\}, \{4, 1\}, \{4, 2\}, \)</span> and <span class="process-math">\(\{4, 3\} \)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-26">Can you come up with a general formula that can be used to find permutations in examples like this?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-27">Let's look at part a, <span class="process-math">\(4 * 3 = (4 * 3 * 2 * 1) / (2 * 1) \text{.}\)</span> How did we get the parts of the quotient?</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><p id="p-28">The general formula for this type of situation is <span class="process-math">\(\frac{n!}{(n-k)!} \)</span></p></div></div>
+</div></article></article></div>
+<section class="section" id="sec_1_2_examples"><h3 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.2.1</span> <span class="title">Examples</span>
 </h3>
 <section class="exercises" id="exercises-1"><h4 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h4>
-<div class="exercisegroup" id="exercisegroup-1">
-<h5 class="heading"><span class="title">Exercise Group.</span></h5>
-<div class="introduction" id="introduction-4"><p id="p-15">Let's look at the set <span class="process-math">\(A = \{1, 2, 3\}\text{.}\)</span></p></div>
-<div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercise-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-16">How many permutations of set A can you create?</p>
+<section class="introduction" id="introduction-6"><p id="p-29">Disc golf is a sport that contains of three types of frisbees: drivers, midranges, and putters. Some disc golfer's bag contains 6 drivers, 5 midranges, and 3 putters.</p></section><article class="exercise exercise-like" id="exercise-3"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<p id="p-30">How many permutations of this bag can you make?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><p id="p-17">There are 6 permutations. <span class="process-math">\(\{1, 2, 3\}, \{1, 3, 2\}, \{2, 1, 3\}, \{2, 3, 1\}, \{3, 1, 2\}\text{,}\)</span> and <span class="process-math">\(\{3, 2, 1\}\text{.}\)</span></p></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-2"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-18">Without writing them all down, does there seem to be another way to figure out how many permutations there will be of a set?</p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like"><p id="p-31">There are <span class="process-math">\(14! \)</span> permutations of this bag which is equivalent to <span class="process-math">\(87,178,291,200 \)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-4"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-32">This disc golfer's friend challenges him to play a hole with three random discs from his bag in the order in which he picks them. How many permuations could the friend make?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like"><p id="p-19">Another way to find the amount of permutations a set will contain is to calculate <span class="process-math">\(n!\)</span> where <span class="process-math">\(n\)</span> is the number of elements within that set.</p></div></div>
-</div></article>
-</div>
-</div></section></section></section></div></main>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like"><p id="p-33">There are <span class="process-math">\(\frac{14!}{(14-3)!} \)</span> which is equivalent to <span class="process-math">\(2184 \)</span></p></div></div>
+</div></article></section></section></section></div></main>
 </div>
 </body>
 </html>
