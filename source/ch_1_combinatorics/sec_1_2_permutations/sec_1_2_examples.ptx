@@ -3,22 +3,22 @@
 <section xml:id="sec_1_2_examples" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Examples</title>
   <exercises>
-      <exercisegroup>
+
         <introduction>
           <p>
-            Let's look at the set <m>A = \{1, 2, 3\}</m>.
+            Disc golf is a sport that contains of three types of frisbees: drivers, midranges, and putters. Some disc golfer's bag contains 6 drivers, 5 midranges, and 3 putters.
           </p>
         </introduction>
 
         <exercise>
           <statement>
             <p>
-              How many permutations of set A can you create?
+              How many permutations of this bag can you make?
             </p>
           </statement>
           <solution>
             <p>
-              There are 6 permutations. <m>\{1, 2, 3\}, \{1, 3, 2\}, \{2, 1, 3\}, \{2, 3, 1\}, \{3, 1, 2\}</m>, and <m>\{3, 2, 1\}</m>.
+              There are <m> 14! </m> permutations of this bag which is equivalent to <m> 87,178,291,200 </m>
             </p>
           </solution>
         </exercise>
@@ -26,15 +26,15 @@
         <exercise>
           <statement>
             <p>
-              Without writing them all down, does there seem to be another way to figure out how many permutations there will be of a set?
+              This disc golfer's friend challenges him to play a hole with three random discs from his bag in the order in which he picks them. How many permuations could the friend make?
             </p>
           </statement>
           <solution>
             <p>
-              Another way to find the amount of permutations a set will contain is to calculate <m>n!</m> where <m>n</m> is the number of elements within that set.
+              There are <m> \frac{14!}{(14-3)!} </m> which is equivalent to <m> 2184 </m>
             </p>
           </solution>
         </exercise>
-      </exercisegroup>
+
     </exercises>
 </section>
