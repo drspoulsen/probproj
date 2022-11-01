@@ -90,13 +90,12 @@
         </bonus>
     </solution>
   </example>
-  </statement
-  <title>Simulation</title>
+</statement>
+  <title> Simulation</title>
   <statement>
   <p>
     This is where simulations come into play. We can use a computer to simulate and perform an event as many times as we want. Then, we can use this data to help us find the probability of said event.
   </p>
   </statement>
 </introduction>
-  <xi:include href="./sec_2_1_examples.ptx" />
 </section >
