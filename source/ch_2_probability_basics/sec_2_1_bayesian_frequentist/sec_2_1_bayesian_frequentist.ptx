@@ -7,6 +7,7 @@
     Bayesian and Frequentist. Before we dive into them, let’s first
     find out which side of this debate you might be on.
     </p>
+  </introduction>
   <example>
     <statement>
       <p>
@@ -25,6 +26,7 @@
       </p>
     </solution>
   </example>
+  <subsection>
   <title>Bayesian</title>
   <statement>
     <p>
@@ -32,20 +34,23 @@
     Bayesians use known information to help predict the unknown likelihood of an event.
     This is a continual process of updating beliefs based on new information given.
     It helps us find the probability of events that can only be done once.
-    Let’s look at this in action in the Bayesian Formula.
+    Let’s look at this in action in Bayes Theorem.
     </p>
   </statement>
-      <title>Bayesian Formula</title>
-      <formula>
+  <theorem>
+        <title>Bayes' Theorem</title>
         <p>
-          <m>P(A|B)=\frac{P(B|A)P(A)}{P(B)}</m>
+          <me>P(A|B)=\frac{P(B|A)P(A)}{P(B)}</me>
         </p>
+    </theorem>
+          <remark>
       <p>
+
         This is read as “A given B,” where B is the information we have been given,
         and A is our known belief, or probability, of B. This new probability, P(A|B),
         is the probability we wish to find. We’ll go more into detail on this later.
       </p>
-    </formula>
+    </remark>
   <statement>
     <p>
       Bayesian is sometimes referred to as the “subjective” interpretation of probability
@@ -54,6 +59,8 @@
       but we never are completely certain.
     </p>
   </statement>
+</subsection>
+<subsection>
   <title>Frequentist</title>
   <statement>
       <p>
@@ -65,6 +72,8 @@
         infinitely many times, we would reach this true probability we mentioned earlier.
       </p>
     </statement>
+  </subsection>
+  <subsection>
   <title>So...which one is correct? Better?</title>
   <statement>
   <p>
@@ -76,26 +85,47 @@
         Decide what the probability of each event would be better modeled by
       </p>
       <p>
-      (a) prob. of having a disease (b) prob of heads twice in a row (c) prob. of hand in poker (d) prob. it rains
+      (a) prob. of having a disease
+    </p>
+    <p>
+      (b) prob of heads twice in a row
+    </p>
+    <p>
+      (c) prob. of hand in poker
+    </p>
+    <p>
+      (d) prob. it rains
       </p>
     </statement>
     <solution>
       <p>
-        (a) Bayesian (b) Frequentist (c) Frequentist (d) Bayesian
+        (a) Bayesian
       </p>
-        <bonus>
+      <p>
+        (b) Frequentist
+      </p>
+      <p>
+        (c) Frequentist
+      </p>
+      <p>
+        (d) Bayesian
+      </p>
+        <remark>
+          <title>Bonus!</title>
           <p>
             The probability a sports team wins may be Bayesian, but the coin toss can be thought of as Frequentist!
           </p>
-        </bonus>
+        </remark>
     </solution>
   </example>
 </statement>
+</subsection>
+<section>
   <title> Simulation</title>
   <statement>
   <p>
     This is where simulations come into play. We can use a computer to simulate and perform an event as many times as we want. Then, we can use this data to help us find the probability of said event.
   </p>
   </statement>
-</introduction>
-</section >
+</section>
+</section>
