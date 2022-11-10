@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <titlepage xmlns:xi="http://www.w3.org/2001/XInclude">
+    <author>
+      <personname>Dylan Poulsen</personname>
+      <department>Department of Mathematics and Computer Science</department>
+      <institution>Washington College</institution>
+      <email>dpoulsen2@washcoll.edu</email>
+    </author>
+
+    <credit>
+      <title>Student Writers</title>
+      <author>
+        <personname>Connor Garrison</personname>
+        <institution>Washington College</institution>
+      </author>
+      <author>
+        <personname>Parker Hayden</personname>
+        <institution>Washington College</institution>
+      </author>
+    </credit>
+
+    <date><today /></date>
+  </titlepage>

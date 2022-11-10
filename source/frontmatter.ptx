@@ -6,32 +6,42 @@
 <frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="meta_frontmatter">
   <titlepage>
     <author>
-      <personname>Me</personname>
-      <department>My department</department>
-      <institution>My school</institution>
+      <personname>Dylan Poulsen (Editor and Director)</personname>
+      <department>Department of Mathematics and Computer Science</department>
+      <institution>Washington College</institution>
     </author>
-    <date><today/></date>
+      <author>
+        <personname>Connor Garrison</personname>
+        <institution>Washington College</institution>
+      </author>
+      <author>
+        <personname>Parker Hayden</personname>
+        <institution>Washington College</institution>
+      </author>
+          <date><today/></date>
   </titlepage>
 
   <colophon>
 
+<!--
     <website>
       <name><c>my-website.org</c></name>
       <address>http://pretextbook.org</address>
     </website>
+  -->
 
     <copyright>
       <!-- In addition to specifying the copyright holder, you should  -->
       <!-- include a license, such as the cc-by-sa license shown below -->
       <!-- so people reading your book know how they can use it.       -->
-      <year>2020<ndash/>2022</year>
-      <holder>Me</holder>
+      <year>2022<ndash/>2023</year>
+      <holder>Dylan Poulsen</holder>
       <!-- <minilicense><image source="../images/by-sa.png" /></minilicense> -->
       <shortlicense>
         <!-- <image source="../images/by-sa.png" width="15%"/>  -->
         This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
         To view a copy of this license, visit
-        <url 
+        <url
           href="http://creativecommons.org/licenses/by-sa/4.0/"
           visual="creativecommons.org/licenses/by-sa/4.0">
           CreativeCommons.org</url>
@@ -39,7 +49,7 @@
     </copyright>
 
   </colophon>
-
+<!--
   <dedication>
     <p>
       For ...
@@ -51,22 +61,18 @@
       I would like to thank...
     </p>
   </acknowledgement>
-
+-->
+<!--
   <preface xml:id="meta_frontmatter-preface">
+-->
     <!-- You should be a little careful about what you put here -->
     <!-- Avoid elements that should have a number, for example  -->
+<!--
     <p>
       About this book:
     </p>
   </preface>
-
+-->
   <!-- You can have more than one preface. -->
-  <preface>
-    <title>Not just that..</title>
-    <p>
-      I still have more to say!
-    </p>
-  </preface>
 
 </frontmatter>
-
