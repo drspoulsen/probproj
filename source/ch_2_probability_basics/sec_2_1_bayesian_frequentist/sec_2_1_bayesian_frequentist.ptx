@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="sec_2_1_bayesian_frequentist" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Bayesian and Frequentist</title>
+  <introduction>
+    <p>There are two types of interpretations of probability,
+    Bayesian and Frequentist. Before we dive into them, let’s first
+    find out which side of this debate you might be on.
+    </p>
+  </introduction>
+  <example>
+    <statement>
+      <p>
+        Suppose you roll a fair six-sided dice. What’s the probability that it is a six?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        If we look at this problem from both sides, a Bayesian might say,
+        the probability is 1 in 6, about 16.7%. However, a Frequentist would
+        counter and say they don’t know the answer, but they know it is either
+        a six or it is not, either 100% or 0% a six.
+      </p>
+      <p>
+        Which one do you agree with?
+      </p>
+    </solution>
+  </example>
+  <subsection>
+  <title>Bayesian</title>
+  <statement>
+    <p>
+    The Bayesian perspective uses prior beliefs to help shape the probability of an event.
+    Bayesians use known information to help predict the unknown likelihood of an event.
+    This is a continual process of updating beliefs based on new information given.
+    It helps us find the probability of events that can only be done once.
+    Let’s look at this in action in Bayes Theorem.
+    </p>
+  </statement>
+  <theorem>
+        <title>Bayes' Theorem</title>
+        <p>
+          <me>P(A|B)=\frac{P(B|A)P(A)}{P(B)}</me>
+        </p>
+    </theorem>
+          <remark>
+      <p>
+
+        This is read as “A given B,” where B is the information we have been given,
+        and A is our known belief, or probability, of B. This new probability, P(A|B),
+        is the probability we wish to find. We’ll go more into detail on this later.
+      </p>
+    </remark>
+  <statement>
+    <p>
+      Bayesian is sometimes referred to as the “subjective” interpretation of probability
+      because opinions are used to find the probability of an event. However, Bayesian and
+      Frequentist are both subjective. We can use probability to predict the outcome an event,
+      but we never are completely certain.
+    </p>
+  </statement>
+</subsection>
+<subsection>
+  <title>Frequentist</title>
+  <statement>
+      <p>
+        The Frequentist perspective uses repeated trials of an event to help find the “true” probability.
+        If we repeat or simulate an event multiple times, we can reach it. We can do 10, 100, or 1,000
+        trials and find the distribution of those outcomes to find this probability. The philosophy of the
+        frequentist perspective coincides with the Law of Large Numbers. If we repeat an experiment a large
+        number of times and find the average, this value will be our expected value. If we conducted an experiment
+        infinitely many times, we would reach this true probability we mentioned earlier.
+      </p>
+    </statement>
+  </subsection>
+  <subsection>
+  <title>So...which one is correct? Better?</title>
+  <statement>
+  <p>
+    Neither is correct or better, but instead, they are two different ways of thinking and approaching probability. However, it can be said that one is more applicable than the other. Bayesian is more applicable when you are computing the probability of events that cannot be repeated over and over, like a sports game or an election. However, if we want to find out the probability of rolling a dice or flipping a coin, it makes sense to use a Frequentist perspective because these are events that can realistically be repeated over and over again. Nevertheless, it is entirely up to the person to decide which perspective to use, which one you may think is better in the situation.
+  </p>
+  <example>
+    <statement>
+      <p>
+        Decide what the probability of each event would be better modeled by
+      </p>
+      <p>
+      (a) prob. of having a disease
+    </p>
+    <p>
+      (b) prob of heads twice in a row
+    </p>
+    <p>
+      (c) prob. of hand in poker
+    </p>
+    <p>
+      (d) prob. it rains
+      </p>
+    </statement>
+    <solution>
+      <p>
+        (a) Bayesian
+      </p>
+      <p>
+        (b) Frequentist
+      </p>
+      <p>
+        (c) Frequentist
+      </p>
+      <p>
+        (d) Bayesian
+      </p>
+        <remark>
+          <title>Bonus!</title>
+          <p>
+            The probability a sports team wins may be Bayesian, but the coin toss can be thought of as Frequentist!
+          </p>
+        </remark>
+    </solution>
+  </example>
+</statement>
+</subsection>
+<section>
+  <title> Simulation</title>
+  <statement>
+  <p>
+    This is where simulations come into play. We can use a computer to simulate and perform an event as many times as we want. Then, we can use this data to help us find the probability of said event.
+  </p>
+  </statement>
+</section>
+</section>
