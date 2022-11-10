@@ -40,9 +40,11 @@
     <p>
       This is Pascal's triangle.
     </p>
-    <p>
-      [Insert picture of Pascal's triangle]
-    </p>
+      <image source="images/Pascal's_triangle_5.svg.png"/>
+      <caption>
+        "File:Pascal's triangle 5.svg" by User:Conrad.Irwin originally
+        User:Drini is licensed under CC BY-SA 3.0.
+      </caption>
     <p>
       What do you notice?
     </p>
