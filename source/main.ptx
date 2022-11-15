@@ -32,6 +32,7 @@
     <!-- on the title (ch-shorttitle.ptx) both here and on disk    -->
     <xi:include href="./ch_1_combinatorics/ch_1_combinatorics.ptx" />
     <xi:include href="./ch_2_probability_basics/ch_2_probability_basics.ptx" />
+    <xi:include href="./ch_3_discrete_random_variables/ch_3_discrete_random_variables.ptx" />
     <!-- Of course you will want to add more chapters as you proceed-->
 
     <!-- This chapter contains a wide variety of elements to  -->
