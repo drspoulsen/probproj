@@ -2,5 +2,222 @@
 
 <section xml:id="sec_2_4_conditional_prob_bayes_thm" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Conditional Probability</title>
+  <statement>
+    <p>
+      We mentioned this idea earlier about updating our beliefs based on new information.
+      This was the Bayesian perspective of thinking...but what does this actually mean?
+      What does it look like?
+    </p>
+  </statement>
+  <example>
+    <statement>
+      <p>
+        Suppose we go to the carnival and play a game.
+        We have 3 cups, one of which has a coin under them. We are given two chances to guess.
+        Imagine we get the first guess wrong, what's the probability we get it right on the next guess?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The probability we pick correctly on our first guess is 1 in 3, about 33%.
+        If we take away a cup, we now have a 50/50 chance of guessing correctly, so our odds increase to 50%.
+        This is what conditional probability is all about. We are given new information
+        (in this example we guessed incorrectly) and update our beliefs.
+      </p>
+    </solution>
+    </example>
+    <theorem>
+      <title>Law of Total Probability</title>
+    <p>
+      If <m>B_1,B_2,B_3, ...</m> is a partition of the sample space <m>S</m>,
+      then for any event <m>A</m> we have <me>P(A)= \sum_{i=1}^{n} P(A \cap B_i) =
+      \sum_{i=1}^{n} P(A|B_i)P(B_i) </me>
+    </p>
+  </theorem>
+  <p>
+    <image source="./images/law_of_total_prob.png" width="50%" />
+  </p>
+  <subsection>
+    <title>Bayes Theorem</title>
+    <p>
+      So what is the Law of Total Probability useful for? It goes hand in hand with the
+      theorem we introduced in Section 2.1, Bayes Theorem. Everytime we use this formulam, we are using the law.
+      First, we'll provide a useful definition and then prove this theorem before diving into some examples.
+    </p>
+    <theorem>
+      <me>P(A|B)=\frac{P(B|A)P(A)}{P(B)}</me>
+    </theorem>
+    <definition>
+      <me>P(A|B)=\frac{P(A \cap B)}{P(B)}</me>
+    </definition>
+    <p>
+      The probability of two events, <m>A</m> and <m>B</m> happening is <m>(A\cap B)</m>.
+      Thus, <me>(A\cap B)=P(B|A)P(A)</me>
+      But also, <me>(A\cap B)=P(A|B)P(B)</me>
+      Therefore, <me>(A\cap B)=P(A|B)P(B)=(A\cap B)=P(B|A)P(A)</me>
+      If we divide both sides by <m>P(B)</m> we get <me>P(A|B)=\frac{P(B|A)P(A)}{P(B)}</me>. Bayes Theorem!
+    </p>
+    <p>
+      Let's put this formula into action on the next example.
+    </p>
+  </subsection>
+    <example>
+      <statement>
+        <p>
+        Suppose we roll a fair twice. The first roll is a one.
+        What is the probability we roll snake eyes on the second roll?
+      </p>
+      </statement>
+      <solution>
+        <p>
+          We are looking for the probability of rolling a one, given we already rolled a one.
+          We will define <m>F_1</m> as the first roll being a one and <m>F_2</m> as the second roll is a one.
+          <m>P(F_1)=\frac{1}{6}</m>. Thus, <m>P(F_2 | F_1) = \frac{P(F_1 | F_2)P(F_2)}{P(F_1)} =</m><me>\frac{(\frac{1}{6})(\frac{1}{6})}{(\frac{1}{6})}=\frac{1}{6}</me>
+        </p>
+        <p>
+          Why? This is because these are independent events. The first dice roll has no effect on
+          the second, third, fourth, etc. This is a helpful realization as we continue through
+          conditional probability.
+        </p>
+      </solution>
+    </example>
+      <example>
+      <statement>
+        <p>
+        Consider a study of 63 college students and if they live off campus.
+        </p>
+        <table>
+  	<title>Table 1. College Housing and Year</title>
+  	<tabular>
+  		<row bottom="medium">
+  			<cell halign="center" right="medium">
 
+  			</cell>
+  			<cell>
+  				1st Year
+  			</cell>
+  			<cell>
+  				2nd Year
+  			</cell>
+  			<cell>
+  				3rd Year
+  			</cell>
+  			<cell>
+  				4th Year
+  			</cell>
+  		</row>
+  		<row>
+  			<cell right="medium">
+  				No
+  			</cell>
+  			<cell>
+  				1
+  			</cell>
+  			<cell>
+  				5
+  			</cell>
+  			<cell>
+  				8
+  			</cell>
+  			<cell>
+  				13
+  			</cell>
+  		</row>
+  		<row>
+  			<cell right="medium">
+  				Yes
+  			</cell>
+  			<cell>
+  				15
+  			</cell>
+  			<cell>
+  				11
+  			</cell>
+  			<cell>
+  				7
+  			</cell>
+  			<cell>
+  				3
+  			</cell>
+  		</row>
+  	</tabular>
+  </table>
+      </statement>
+      <p>
+        What is the probability a student is a 3rd year, given they live off campus?
+      </p>
+    <solution>
+          <p>
+            <m>P(3rd|Yes)=</m><me>\frac{P(Yes|3rd)P(3rd)}{P(Yes)}=\frac{\frac{14}{25}\frac{15}{63}}{\frac{3}{7}}=
+              \frac{1470}{4725}=.3111</me>
+          </p>
+    </solution>
+    </example>
+        <subsection><title>Base Rate Fallacy</title>
+        <p>
+          A common problem in conditional probability is the Base Rate Fallacy.
+          This is where the base rate or initial probability of an event leads to
+          misinterpretation of the probability of a specific situation of an event.
+          We will look a common example.
+        </p>
+        <example>
+          <statement>
+            <p>
+              Let <m>A</m> be a rare disease that only .1% of the population has (base rate).
+              The test has a 3% false positive rate and 6% false negative rate. The test comes back positive.
+              What’s the probability you have the disease?
+          </p>
+          </statement>
+          <solution>
+            <p>
+              <m>P(A | P)=\frac{P(P|A)P(A)}{P(P)}</m>
+            </p>
+            <p>
+              We must use the Law of Total Probability to compute <m>P(P)</m>
+            </p>
+            <p>
+              Thus, <m>P(A | P)=\frac{P(P|A)P(A)}{P(P\cap B_1)+P(P \cap B_2)}=
+              \frac{(.094)(.001)}{(.094)(.001) + (.999)(.03)}=.003126</m> Therefore,
+              <m>P(A|P)</m> is 0.3%.
+            </p>
+          </solution>
+        </example>
+      </subsection>
+<example>
+  <statement>
+    <p>
+      Consider a class with a grading scale of A, B, and F. There are 36 students in the class.
+      The first test, 21% received an A, 63% a B, and 16% an F.
+      Of those, %1 of those who got an A ended up failing the class, 11% with a B failed, and 45% with an F failed.
+  </p>
+  <p>
+    Given a student failed, what is the probability they got a B on the first test?
+  </p>
+  </statement>
+  <solution>
+    <p>
+      <m>P(B|Fail)=</m><me>\frac{P(Fail|B)P(B)}{P(Fail)}=\frac{P(Fail|B)P(B)}{P(Fail|A)P(A)+P(Fail|B)P(B)+P(Fail|F)P(F)}=\frac{(.11)(.63)}{(.1434)}=.48326</me>
+    </p>
+  </solution>
+</example>
+<subsection><title>Using Multiplication Trees</title>
+<p>
+  Another way to solve Conditional Probability is to use Multiplication Trees. Consider the next example.
+</p>
+<example>
+  <statement>
+    <p>
+      Consider two boxes, each with red and blue marbles in them.
+      Box #1 is 53% blue marbles, and Box #2 is 88% blue marbles. Suppose we flip a coin to decide which box to choose a marble from.
+      What is the probability we pick a red marble, given the coin landed on heads? Furthermore, what's the probability of getting a red marble?
+    </p>
+    <p>
+      Use a multiplication tree!
+    </p>
+    <solution>
+      <image source="sec_2_4_conditional_prob_bayes_thm/sec_2_4 img mult trees.png" width="50%" />
+    </solution>
+  </statement>
+</example>
+</subsection>
 </section>
