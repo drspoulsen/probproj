@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Independence</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="The Probability Project">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="probproj.html"><span class="title">The Probability Project:</span> <span class="subtitle">A textbook by students, for students</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_2_4_conditional_prob_bayes_thm.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_2_probability_basics.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_2_4_conditional_prob_bayes_thm.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_2_probability_basics.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="ch_1_combinatorics.html" data-scroll="ch_1_combinatorics" class="internal"><span class="codenumber">1</span> <span class="title">Combinatorics</span></a><ul>
+<li><a href="sec_1_1_multiplication.html" data-scroll="sec_1_1_multiplication" class="internal">Multiplication Principle</a></li>
+<li><a href="sec_1_2_permutations.html" data-scroll="sec_1_2_permutations" class="internal">Permutations</a></li>
+<li><a href="sec_1_3_combinations.html" data-scroll="sec_1_3_combinations" class="internal">Combinations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_2_probability_basics.html" data-scroll="ch_2_probability_basics" class="internal"><span class="codenumber">2</span> <span class="title">Probability Basics</span></a><ul>
+<li><a href="sec_2_1_bayesian_frequentist.html" data-scroll="sec_2_1_bayesian_frequentist" class="internal">Bayesian and Frequentist</a></li>
+<li><a href="sec_2_2_axioms.html" data-scroll="sec_2_2_axioms" class="internal">Axioms of Probability</a></li>
+<li><a href="sec_2_3_simulation.html" data-scroll="sec_2_3_simulation" class="internal">Simulation</a></li>
+<li><a href="sec_2_4_conditional_prob_bayes_thm.html" data-scroll="sec_2_4_conditional_prob_bayes_thm" class="internal">Conditional Probability</a></li>
+<li><a href="sec_2_5_independence.html" data-scroll="sec_2_5_independence" class="active">Independence</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_2_5_independence"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.5</span> <span class="title">Independence</span>
+</h2>
+<p id="p-134">Look at the formal definition of the word independence. Think about this definition and its meaning in mathematics.</p>
+<article class="definition definition-like" id="definition-4"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.1</span><span class="period">.</span>
+</h3>
+<p id="p-135">Not depending on something else for strength or effectiveness; freestanding</p></article><p id="p-136">How do you think this relates to probability?</p>
+<article class="example example-like" id="example-21"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-21"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.2</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-21"><article class="example example-like"><p id="p-137">Suppose you roll a fair six-sided dice and it’s a four. Will this affect your next roll? Are you more likely to get a four? Less likely?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like"><p id="p-138">The first roll should not affect the second roll. We should be equally like to get a four on the second roll as we did the first. This is because these are two independent events.</p></div></div>
+</div></article></div>
+<article class="definition definition-like" id="definition-5"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.3</span><span class="period">.</span>
+</h3>
+<p id="p-139">Two events <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are independent if</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+P(A\cap B)=P(A)P(B)
+\end{equation*}
+</div></article><p id="p-140">To relate back the example we had earlier, think of the first roll as ‘Event A’ and the second as ‘Event B’.</p>
+<p id="p-141">In the previous section we talked about conditional probability. The probability of some event <span class="process-math">\(A\)</span> given some event <span class="process-math">\(B\text{.}\)</span> If events are independent, since one does not affect the other, we can define the conditional probability</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+P(A|B)=P(A)
+\end{equation*}
+</div>
+<p class="continuation">Furthermore,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+P(B|A)=P(B)
+\end{equation*}
+</div>
+<p id="p-142">Note that this is not a definition for independence. The probability of “<span class="process-math">\(A\)</span> given <span class="process-math">\(B\)</span>” is not the converse of “<span class="process-math">\(B\)</span> given <span class="process-math">\(A\text{.}\)</span>”</p>
+<p id="p-143">Refer back to the previous example on Section 2.4. The probability of getting snake eyes, given we already rolled a one, is equal to the probability of just rolling a one.</p>
+<article class="example example-like" id="example-22"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-22"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.4</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-22"><article class="example example-like"><p id="p-144">Suppose <span class="process-math">\(A\)</span> is the event you roll an even number and <span class="process-math">\(B\)</span> is the event you roll a four. Are these events independent?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-24" id="solution-24"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-24"><div class="solution solution-like"><p id="p-145"><span class="process-math">\(P(A \cap B) \neq P(A)P(B)\text{.}\)</span> Not independent!</p></div></div>
+</div></article></div>
+<p id="p-146">How do you think the formal definition of independence would extend to three independent events A, B, and C?</p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-25" id="solution-25"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-25"><div class="solution solution-like"><div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+P(A\cap B\cap C)=P(A)P(B)P(C)
+\end{equation*}
+</div></div></div>
+<p id="p-147">It is also true that if three events are independent, for any combination of two events, independence still holds such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-148">
+\begin{equation*}
+P(A\cap B)=P(A)P(B)
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-149">
+\begin{equation*}
+P(B\cap C)=P(B)P(C)
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="" id="p-150">
+\begin{equation*}
+P(A\cap C)=P(A)P(C)
+\end{equation*}
+</div></section></div></main>
+</div>
+</body>
+</html>
