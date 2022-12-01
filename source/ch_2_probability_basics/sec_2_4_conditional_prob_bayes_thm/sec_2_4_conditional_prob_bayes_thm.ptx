@@ -35,7 +35,7 @@
     </p>
   </theorem>
   <p>
-    <image source="sec_2_4_conditional_prob_bayes_thm/law of total prob.png" width="50%" />
+    <image source="./images/law_of_total_prob.png" width="50%" />
   </p>
   <subsection>
     <title>Bayes Theorem</title>
