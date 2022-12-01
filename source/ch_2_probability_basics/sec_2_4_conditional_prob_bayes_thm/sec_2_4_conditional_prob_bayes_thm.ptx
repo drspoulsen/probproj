@@ -30,8 +30,8 @@
       <title>Law of Total Probability</title>
     <p>
       If <m>B_1,B_2,B_3, ...</m> is a partition of the sample space <m>S</m>,
-      then for any event <m>A</m> we have <me>P(A)=\[ \sum_{i=1}^{n} P(A \cap B_i) \]=
-      \[ \sum_{i=1}^{n} P(A|B_i)P(B_i) \]</me>
+      then for any event <m>A</m> we have <me>P(A)= \sum_{i=1}^{n} P(A \cap B_i) =
+      \sum_{i=1}^{n} P(A|B_i)P(B_i) </me>
     </p>
   </theorem>
   <p>
