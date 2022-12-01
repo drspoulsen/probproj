@@ -16,7 +16,10 @@
   <!-- with organization to include them as separate files.      -->
   <!-- That way it is easy to include the section in a different -->
   <xi:include href="./sec_2_1_bayesian_frequentist/sec_2_1_bayesian_frequentist.ptx" />
+  <xi:include href="./sec_2_2_axioms/sec_2_2_axioms.ptx" />
   <!-- chapter later if you change your mind about the order.    -->
   <xi:include href="./sec_2_3_simulation/sec_2_3_simulation.ptx" />
   <!-- One or more of the sections of a chapter might be exercises-->
+  <xi:include href="./sec_2_4_conditional_prob_bayes_thm/sec_2_4_conditional_prob_bayes_thm.ptx" />
+  <xi:include href="./sec_2_5_independence/sec_2_5_independence.ptx" />
 </chapter>

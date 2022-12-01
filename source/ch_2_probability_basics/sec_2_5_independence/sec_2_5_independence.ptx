@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="sec_2_5_independence" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Independence</title>
+    <p>
+      Look at the formal definition of the word independence.
+      Think about this definition and its meaning in mathematics.
+    </p>
+  <definition>
+    <p>
+      Not depending on something else for strength or effectiveness; freestanding
+    </p>
+  </definition>
+  <p>
+    How do you think this relates to probability?
+  </p>
+  <example>
+    <statement>
+      <p>
+        Suppose you roll a fair six-sided dice and it’s a four. Will this affect your next roll? Are you more likely to get a four? Less likely?
+      </p>
+    </statement>
+    <solution>
+      <p>
+      The first roll should not affect the second roll. We should be equally like to get
+      a four on the second roll as we did the first. This is because these are two independent
+      events.
+      </p>
+    </solution>
+  </example>
+  <definition>
+    <p>
+      Two events <m>A</m> and <m>B</m> are independent if <me>P(A\cap B)=P(A)P(B)</me>
+    </p>
+  </definition>
+    <p>
+      To relate back the example we had earlier, think of the first roll as ‘Event A’ and the second as ‘Event B’.
+    </p>
+    <p>
+      In the previous section we talked about conditional probability. The probability of some event <m>A</m> given some event <m>B</m>.
+      If events are independent, since one does not affect the other, we can define the conditional probability <me>P(A|B)=P(A)</me>
+      Furthermore, <me>P(B|A)=P(B)</me>
+    </p>
+    <p>
+      Note that this is not a definition for independence. The probability of “<m>A</m> given <m>B</m>” is not the converse of “<m>B</m> given <m>A</m>.”
+    </p>
+    <p>
+      Refer back to the previous example on Section 2.4. The probability of getting snake eyes, given we already rolled a one, is equal to the probability of just rolling a one.
+    </p>
+  <example>
+    <statement>
+      <p>
+        Suppose <m>A</m> is the event you roll an even number and <m>B</m> is the event you roll a four. Are these events independent?
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <m>P(A \cap B) \neq P(A)P(B)</m>. Not independent!
+      </p>
+    </solution>
+  </example>
+  <statement>
+  <p>
+    How do you think the formal definition of independence would extend to three independent events A, B, and C?
+  </p>
+  <solution>
+    <me>P(A\cap B\cap C)=P(A)P(B)P(C)</me>
+  </solution>
+</statement>
+  <p>
+    It is also true that if three events are independent, for any combination of two events, independence still holds such that
+  </p>
+  <p>
+    <me>P(A\cap B)=P(A)P(B)</me>
+  </p>
+  <p>
+    <me>P(B\cap C)=P(B)P(C)</me>
+  </p>
+  <p>
+    <me>P(A\cap C)=P(A)P(C)</me>
+  </p>
+</section>
