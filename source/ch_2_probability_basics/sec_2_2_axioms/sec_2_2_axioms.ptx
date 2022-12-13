@@ -1,8 +1,130 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<section xml:id="sec_2_2_axioms" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Axioms of Probability</title>
+<section xml:id="sec_2_2_axioms" xmlns:xi="http://www.w3.org/2001/XInclude" >
+<title>Probability Axioms</title>
+<introduction>
   <p>
-    Intro!
+    Before we dive in, let’s explain what an axiom is.
   </p>
+	<definition><title>Axiom</title>
+		<p>
+			an unprovable rule or first principle accepted as true because it is self-
+      evident or particularly useful. “Nothing can both be and not be at the
+      same time and in the same respect” is an example of an axiom.
+		</p>
+	</definition>
+	<p>
+    Now, let’s define a few terms.
+  </p>
+  <definition><title>Experiment</title>
+		<p>
+			A repeatable procedure with well-defined possible outcomes.
+		</p>
+  </definition>
+  <definition><title>Sample Space</title>
+		<p>
+			The set of all possible outcomes. Denoted by <m>S</m>, or <m>\Omega</m>.
+		</p>
+  </definition>
+  <definition><title>Event</title>
+		<p>
+			A subset of the sample space.
+		</p>
+  </definition>
+  <definition><title>Probability Function</title>
+		<p>
+			A function giving the probability for each event
+		</p>
+  </definition>
+  <example>
+		<statement>
+      <p>
+				Roll a fair dice.
+      </p>
+		</statement>
+		<solution>
+			<p>
+				Experiment: roll the dice, report the number it lands on.
+			</p>
+      <p>
+				Sample Space: <m>S = \{1,2,3,4,5,6\}</m>
+			</p>
+      <p>
+				Events: <m>\{1\}, \{2\}, \{3\},\{4\},\{5\},\{6\},\emptyset ,
+        \{1,2,3,4,5,6\}</m>
+			</p>
+      <p>
+				Probability Function: <m>P(\{1\})= \frac{1}{6}, P(\21\})= \frac{1}{6}, P(\{3\})= \frac{1}{6}, P(\{4\})= \frac{1}{6}, P(\{5\})= \frac{1}{6}, P(\{6\})= \frac{1}{6}, P(\emptyset)=0, P(\{1,2,3,4,5,6\})=1</m>
+      </p>
+    </solution>
+  </example>
+</introduction>
+<subsection><title>Axioms of Probability</title>
+	<lemma>
+		<p>
+      1.	For any event <m>E</m>, <me>0 \leq P(E) \leq 1</me>
+    </p>
+    <p>
+      2.	<m>P(S)=1</m>
+    </p>
+    <p>
+      3.	For any sequence of mutually disjoint (or mutually exclusive) events <me>\bigcap_{i=1}^{ \infty} E_i = \emptyset </me> Then, <me>P \left(\bigcup_{i=1}^{infty} E_i \right) = \sum_{i=1}^{\infty} P(E_i)</me>
+		</p>
+	</lemma>
+    <p>
+      The third Axiom, in other words, says the probability of the infinite union of disjoint events <m>E_1,E_2, E_3,…</m> is equal to the total sum of the probability of each event.
+    </p>
+    <example>
+      <statement>
+        <p>
+          Remember that an event is a subset of the sample space. Now, consider an arbitrary amount of events.
+          What can we conclude about the comparison between sum of the probabilities of these events and the probability of the sample space?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <me>\sum_{i=1}^{\infty} P(E_i) \leq P(S) = 1</me>
+        </p>
+      </solution>
+    </example>
+    <example>
+	   <statement>
+		     <p>
+			        Imagine you want to draw from a standard deck of cards. Consider two
+              events, <m>A</m>, picking a red card and <m>B</m> picking a club.
+              What is <m>P(A \cap B)</m>? <m>P(A \cup B)</m>?
+		     </p>
+       </statement>
+	   <solution>
+		      <p>
+			         <m>P(A \cap B) = \emptyset </m> since they are mutually disjoint events.
+		      </p>
+		      <p>
+            <m>P(A \cup B) = P(A)+P(B)=\frac{26}{52}+\frac{13}{52}=\frac{3}{4}</m>.
+		      </p>
+	   </solution>
+    </example>
+</subsection>
+<subsection><title>Consequences of Axioms</title>
+  <p>
+    We call these consequences because these are additional rules or things we can prove true
+    based on the axioms we defined.
+  </p>
+  <remark><title>Complement Rule</title>
+    <p>
+			Let <m>A</m> be an event. Then, <me>P(A^{c})=1-P(A)</me>
+    </p>
+  </remark>
+  <remark><title>Monotonicity</title>
+    <p>
+      Let <m>A</m> and <m>B</m> be events. If <m>A \subseteq B</m>
+      then <me>P(A) \leq P(B)</me>
+    </p>
+  </remark>
+  <remark><title>Union of Sets</title>
+    <p>
+	     <m>P(A \cup B) = P(A) + P(B)-P(A \cap B)</m>
+    </p>
+  </remark>
+</subsection>
 </section>
