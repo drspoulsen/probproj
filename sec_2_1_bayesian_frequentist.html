@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Bayesian and Frequentist</title>
@@ -13,20 +13,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="The Probability Project">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<meta property="book:author" content="Dylan Poulsen, Ph.D. (Editor and Director)">
+<meta property="book:author" content="Connor Garrison">
+<meta property="book:author" content="Parker Hayden">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
-    renderActions: {
-        findScript: [10, function (doc) {
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
             document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
                 var display = !!node.type.match(/; *mode=display/);
                 var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
@@ -36,40 +57,75 @@ window.MathJax = {
                 math.end = {node: text, delim: '', n: 0};
                 doc.math.push(math);
             });
-        }, '']
-    },
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.88,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-},
+  }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.32/pretext_search.js"></script><link href="https://pretextbook.org/css/0.82/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.32</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.32/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.32/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.32/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.82/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="probproj.html"><span class="title">The Probability Project:</span> <span class="subtitle">A textbook by students, for students</span></a></h1>
+<p class="byline">Dylan Poulsen, Ph.D. (Editor and Director), Connor Garrison, Parker Hayden</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch_2_probability_basics.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_2_probability_basics.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec_2_2_axioms.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\R}{\mathbb R}
@@ -79,95 +135,113 @@ window.MathJax = {
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="probproj.html"><span class="title">The Probability Project:</span> <span class="subtitle">A textbook by students, for students</span></a></h1>
-<p class="byline"></p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ch_2_probability_basics.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_2_probability_basics.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_2_2_axioms.html" title="Next">Next</a></span></div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ch_2_probability_basics.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_2_probability_basics.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_2_2_axioms.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link">
-<a href="ch_1_combinatorics.html" data-scroll="ch_1_combinatorics" class="internal"><span class="codenumber">1</span> <span class="title">Combinatorics</span></a><ul>
-<li><a href="sec_1_1_multiplication.html" data-scroll="sec_1_1_multiplication" class="internal">Multiplication Principle</a></li>
-<li><a href="sec_1_2_permutations.html" data-scroll="sec_1_2_permutations" class="internal">Permutations</a></li>
-<li><a href="sec_1_3_combinations.html" data-scroll="sec_1_3_combinations" class="internal">Combinations</a></li>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="meta_frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_1_combinatorics.html" class="internal"><span class="codenumber">1</span> <span class="title">Combinatorics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_1_1_multiplication.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Multiplication Principle</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_1_1_multiplication.html#sec_1_1_examples" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Examples</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_1_2_permutations.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Permutations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_1_2_permutations.html#sec_1_2_examples" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Examples</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_1_2_permutations.html#exercises-1" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_1_3_combinations.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Combinations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_1_3_combinations.html#sec_1_3_examples" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Examples</span></a></div></li></ul>
+</li>
 </ul>
 </li>
-<li class="link">
-<a href="ch_2_probability_basics.html" data-scroll="ch_2_probability_basics" class="internal"><span class="codenumber">2</span> <span class="title">Probability Basics</span></a><ul>
-<li><a href="sec_2_1_bayesian_frequentist.html" data-scroll="sec_2_1_bayesian_frequentist" class="active">Bayesian and Frequentist</a></li>
-<li><a href="sec_2_2_axioms.html" data-scroll="sec_2_2_axioms" class="internal">Axioms of Probability</a></li>
-<li><a href="sec_2_3_simulation.html" data-scroll="sec_2_3_simulation" class="internal">Simulation</a></li>
-<li><a href="sec_2_4_conditional_prob_bayes_thm.html" data-scroll="sec_2_4_conditional_prob_bayes_thm" class="internal">Conditional Probability</a></li>
-<li><a href="sec_2_5_independence.html" data-scroll="sec_2_5_independence" class="internal">Independence</a></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch_2_probability_basics.html" class="internal"><span class="codenumber">2</span> <span class="title">Probability Basics</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec_2_1_bayesian_frequentist.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Bayesian and Frequentist</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_2_1_bayesian_frequentist.html#subsection-1" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Bayesian</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_2_1_bayesian_frequentist.html#subsection-2" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Frequentist</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_2_1_bayesian_frequentist.html#subsection-3" class="internal"><span class="codenumber">2.1.3</span> <span class="title">So...which one is correct? Better?</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_2_1_bayesian_frequentist.html#section-8" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Simulation</span></a></div></li>
 </ul>
 </li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_2_1_bayesian_frequentist"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Bayesian and Frequentist</span>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_2_2_axioms.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Axioms of Probability</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_2_3_simulation.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Simulation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_2_3_simulation.html#sec_2_3_tutorial" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Sage Tutorial</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_2_4_conditional_prob_bayes_thm.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Conditional Probability</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_2_4_conditional_prob_bayes_thm.html#subsection-4" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Bayes Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_2_4_conditional_prob_bayes_thm.html#subsection-5" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Base Rate Fallacy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_2_4_conditional_prob_bayes_thm.html#subsection-6" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Using Multiplication Trees</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_2_5_independence.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Independence</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_3_discrete_random_variables.html" class="internal"><span class="codenumber">3</span> <span class="title">Discrete Random Variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_3_1_discrete_random_variables.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Discrete Random Variables</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_3_9_projects.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Projects with Discrete Random Variables</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_3_9_projects.html#subsection-7" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Shiny Hunting in Pokemon</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec_2_1_bayesian_frequentist"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.1</span><span class="space"> </span><span class="title">Bayesian and Frequentist</span>
 </h2>
-<section class="introduction" id="introduction-9"><p id="p-69">There are two types of interpretations of probability, Bayesian and Frequentist. Before we dive into them, let’s first find out which side of this debate you might be on.</p></section><article class="example example-like" id="example-11"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-11"><h3 class="heading">
+<section class="introduction" id="introduction-9"><div class="para" id="p-68">There are two types of interpretations of probability, Bayesian and Frequentist. Before we dive into them, let’s first find out which side of this debate you might be on.</div></section><details id="example-11" class="example example-like"><summary><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-11"><article class="example example-like"><p id="p-70">Suppose you roll a fair six-sided dice. What’s the probability that it is a six?</p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
-<p id="p-71">If we look at this problem from both sides, a Bayesian might say, the probability is 1 in 6, about 16.7%. However, a Frequentist would counter and say they don’t know the answer, but they know it is either a six or it is not, either 100% or 0% a six.</p>
-<p id="p-72">Which one do you agree with?</p>
-</div></div>
-</div></article></div>
-<section class="subsection" id="subsection-1"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.1.1</span> <span class="title">Bayesian</span>
+</h3></summary><article class="example example-like"><div class="para" id="p-69">Suppose you roll a fair six-sided dice. What’s the probability that it is a six?</div>
+<div class="solutions"><details id="solution-15" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-70">If we look at this problem from both sides, a Bayesian might say, the probability is 1 in 6, about 16.7%. However, a Frequentist would counter and say they don’t know the answer, but they know it is either a six or it is not, either 100% or 0% a six.</div> <div class="para" id="p-71">Which one do you agree with?</div>
+</div></details></div></article></details><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="space"> </span><span class="title">Bayesian</span>
 </h3>
-<p id="p-73">The Bayesian perspective uses prior beliefs to help shape the probability of an event. Bayesians use known information to help predict the unknown likelihood of an event. This is a continual process of updating beliefs based on new information given. It helps us find the probability of events that can only be done once. Let’s look at this in action in Bayes Theorem.</p>
+<div class="para" id="p-72">The Bayesian perspective uses prior beliefs to help shape the probability of an event. Bayesians use known information to help predict the unknown likelihood of an event. This is a continual process of updating beliefs based on new information given. It helps us find the probability of events that can only be done once. Let’s look at this in action in Bayes Theorem.</div>
 <article class="theorem theorem-like" id="theorem-2"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Bayes' Theorem.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Bayes’ Theorem.</span>
 </h4>
-<div class="displaymath process-math" data-contains-math-knowls="" id="p-74">
+<div class="para logical" id="p-73"><div class="displaymath process-math">
 \begin{equation*}
 P(A|B)=\frac{P(B|A)P(A)}{P(B)}
 \end{equation*}
-</div></article><article class="remark remark-like" id="remark-2"><h4 class="heading">
+</div></div></article><article class="remark remark-like" id="remark-2"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
 </h4>
-<p id="p-75">This is read as “A given B,” where B is the information we have been given, and A is our known belief, or probability, of B. This new probability, P(A|B), is the probability we wish to find. We’ll go more into detail on this later.</p></article><p id="p-76">Bayesian is sometimes referred to as the “subjective” interpretation of probability because opinions are used to find the probability of an event. However, Bayesian and Frequentist are both subjective. We can use probability to predict the outcome an event, but we never are completely certain.</p></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.1.2</span> <span class="title">Frequentist</span>
+<div class="para" id="p-74">This is read as “A given B,” where B is the information we have been given, and A is our known belief, or probability, of B. This new probability, P(A|B), is the probability we wish to find. We’ll go more into detail on this later.</div></article><div class="para" id="p-75">Bayesian is sometimes referred to as the “subjective” interpretation of probability because opinions are used to find the probability of an event. However, Bayesian and Frequentist are both subjective. We can use probability to predict the outcome an event, but we never are completely certain.</div></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="space"> </span><span class="title">Frequentist</span>
 </h3>
-<p id="p-77">The Frequentist perspective uses repeated trials of an event to help find the “true” probability. If we repeat or simulate an event multiple times, we can reach it. We can do 10, 100, or 1,000 trials and find the distribution of those outcomes to find this probability. The philosophy of the frequentist perspective coincides with the Law of Large Numbers. If we repeat an experiment a large number of times and find the average, this value will be our expected value. If we conducted an experiment infinitely many times, we would reach this true probability we mentioned earlier.</p></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.1.3</span> <span class="title">So...which one is correct? Better?</span>
+<div class="para" id="p-76">The Frequentist perspective uses repeated trials of an event to help find the “true” probability. If we repeat or simulate an event multiple times, we can reach it. We can do 10, 100, or 1,000 trials and find the distribution of those outcomes to find this probability. The philosophy of the frequentist perspective coincides with the Law of Large Numbers. If we repeat an experiment a large number of times and find the average, this value will be our expected value. If we conducted an experiment infinitely many times, we would reach this true probability we mentioned earlier.</div></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="space"> </span><span class="title">So...which one is correct? Better?</span>
 </h3>
-<p id="p-78">Neither is correct or better, but instead, they are two different ways of thinking and approaching probability. However, it can be said that one is more applicable than the other. Bayesian is more applicable when you are computing the probability of events that cannot be repeated over and over, like a sports game or an election. However, if we want to find out the probability of rolling a dice or flipping a coin, it makes sense to use a Frequentist perspective because these are events that can realistically be repeated over and over again. Nevertheless, it is entirely up to the person to decide which perspective to use, which one you may think is better in the situation.</p>
-<article class="example example-like" id="example-12"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-12"><h4 class="heading">
+<div class="para" id="p-77">Neither is correct or better, but instead, they are two different ways of thinking and approaching probability. However, it can be said that one is more applicable than the other. Bayesian is more applicable when you are computing the probability of events that cannot be repeated over and over, like a sports game or an election. However, if we want to find out the probability of rolling a dice or flipping a coin, it makes sense to use a Frequentist perspective because these are events that can realistically be repeated over and over again. Nevertheless, it is entirely up to the person to decide which perspective to use, which one you may think is better in the situation.</div> <details id="example-12" class="example example-like"><summary><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-12"><article class="example example-like"><p id="p-79">Decide what the probability of each event would be better modeled by</p>
-<p id="p-80">(a) prob. of having a disease</p>
-<p id="p-81">(b) prob of heads twice in a row</p>
-<p id="p-82">(c) prob. of hand in poker</p>
-<p id="p-83">(d) prob. it rains</p>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
-<p id="p-84">(a) Bayesian</p>
-<p id="p-85">(b) Frequentist</p>
-<p id="p-86">(c) Frequentist</p>
-<p id="p-87">(d) Bayesian</p>
-<article class="remark remark-like" id="remark-3"><h5 class="heading">
+</h4></summary><article class="example example-like"><div class="para" id="p-78">Decide what the probability of each event would be better modeled by</div> <div class="para" id="p-79">(a) prob. of having a disease</div> <div class="para" id="p-80">(b) prob of heads twice in a row</div> <div class="para" id="p-81">(c) prob. of hand in poker</div> <div class="para" id="p-82">(d) prob. it rains</div>
+<div class="solutions"><details id="solution-16" class="solution solution-like"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-83">(a) Bayesian</div> <div class="para" id="p-84">(b) Frequentist</div> <div class="para" id="p-85">(c) Frequentist</div> <div class="para" id="p-86">(d) Bayesian</div> <article class="remark remark-like" id="remark-3"><h5 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Bonus!</span>
-</h5>
-<p id="p-88">The probability a sports team wins may be Bayesian, but the coin toss can be thought of as Frequentist!</p></article>
-</div></div>
-</div></article></div></section><section class="section" id="section-8"><h3 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.1.1</span> <span class="title">Simulation</span>
+</h5> <div class="para" id="p-87">The probability a sports team wins may be Bayesian, but the coin toss can be thought of as Frequentist!</div></article>
+</div></details></div></article></details></section><section class="section" id="section-8"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="space"> </span><span class="title">Simulation</span>
 </h3>
-<p id="p-89">This is where simulations come into play. We can use a computer to simulate and perform an event as many times as we want. Then, we can use this data to help us find the probability of said event.</p></section></section></div></main>
+<div class="para" id="p-88">This is where simulations come into play. We can use a computer to simulate and perform an event as many times as we want. Then, we can use this data to help us find the probability of said event.</div></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="ch_2_probability_basics.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec_2_2_axioms.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>
